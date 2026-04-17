@@ -7,13 +7,25 @@
     <script src="main.js"></script>
     <link rel="icon" type="image/jpeg" sizes="16x16" href="img/Logo.jpeg">
 
+    <!-- Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- Font End -->
+
     <title>Portofolio | Ahmad Erlan Saputra</title>
+
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body >
 
     <!-- Night Mode menggunakan bg-gray-900 -->
-    <!-- Primary #2596be -->
-    <!-- Analog #254ABE -->
+    <!-- Secondary #3B82F6 -->
+    <!-- Primary #254ABE -->
 
     <!-- Header -->
     <header class=" sticky top-0 z-50 shadow-lg">
@@ -33,10 +45,10 @@
     <section id="beranda" class="py-5">
         <div class="flex flex-wrap p-4">
             <div class="w-full self-center px-4 lg:w-1/2">
-                <h2 class="text-3xl font-semibold text-[#254ABE]">Hi!, Selamat datang di portofolio saya</h2>
+                <h2 class="text-3xl font-semibold text-[#254ABE]">Hi! Selamat datang di portofolio saya</h2>
                 <h1 class="text-5xl font-bold mb-1">Ahmad Erlan Saputra</h1>
-                <h1 class="text-2xl font-semibold mb-4">Tamatan <a href="https://www.itp.ac.id/" class="text-[#254ABE] hover:text-blue-800 underline" target="_blank">Institut Teknologi Padang</a></h1>
-                <p class="text-md text-gray-500 font-semibold text-justify ">Pada halaman portofolio saya, anda dapat menemukan informasi tentang saya, portofolio, pengalaman, dan cara menghubungi saya.</p>
+                <h1 class="text-2xl font-semibold mb-4">Alumni <a href="https://www.itp.ac.id/" class="text-[#254ABE] hover:text-blue-800 underline" target="_blank">Institut Teknologi Padang</a></h1>
+                <p class="text-md text-gray-500 font-semibold text-justify ">Pada halaman portofolio saya anda dapat menemukan informasi tentang saya, pengalaman, dan cara menghubungi saya.</p>
 
                 <a href="#kontak" class="inline-block mt-4">
                     <button type="button" class="bg-[#254ABE] hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
@@ -59,34 +71,56 @@
     </section>
     <!-- Beranda End -->
 
-    <!-- Waves -->
-     <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
-        <path d="M 0,600 L 0,150 C 92.60287081339715,145.54066985645932 185.2057416267943,141.08133971291866 270,126 C 354.7942583732057,110.91866028708134 431.77990430622003,85.2153110047847 544,109 C 656.22009569378,132.7846889952153 803.6746411483253,206.05741626794256 898,207 C 992.3253588516747,207.94258373205744 1033.5215311004786,136.555023923445 1115,115 C 1196.4784688995214,93.44497607655502 1318.2392344497607,121.7224880382775 1440,150 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#2596be" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><path d="M 0,600 L 0,350 C 69.45454545454547,374.96650717703346 138.90909090909093,399.933014354067 241,371 C 343.09090909090907,342.066985645933 477.81818181818176,259.2344497607656 592,275 C 706.1818181818182,290.7655502392344 799.818181818182,405.12918660287085 897,420 C 994.181818181818,434.87081339712915 1094.909090909091,350.2488038277512 1186,322 C 1277.090909090909,293.7511961722488 1358.5454545454545,321.8755980861244 1440,350 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#2596be" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1">
-        </path>
-     </svg>
-    <!-- Waves End -->
-
     <!-- Tentang Saya -->
-     <section id="tentangsaya" class="py-15 bg-[#2596be]">
-        <h2 class="text-2xl font-bold text-[#254ABE] px-7">Tentang Saya</h2>
+    <section id="tentangsaya" class="py-10">
         <div class="flex flex-wrap px-4">
             <div class="w-full self-center px-4 lg:w-1/2">
-                <h3 class="text-2xl font-semibold text-white mb-1">IT & Lulusan Teknik Informatika</h3>
-                <p class="text-white text-justify">Saya adalah Seorang <span class="font-bold">IT</span>, memiliki pengalaman bekerja dengan perusahaan dan Alumni <span class="font-bold"><a href="https://www.itp.ac.id/" target="_blank" class="text-white hover:underline">Institut Teknologi Padang</a></span> dengan jurusan <span class="font-bold"><a href="https://itp.ac.id/teknik-informatika-s1" target="_blank" class="text-white hover:underline">Teknik Informatika</a></span> dengan pengalaman dalam pengembangan perangkat lunak khususnya dalam bidang web development dan pemecahan masalah teknis.</p>
+                <img src="img/L.png" alt="Erlan" class="w-1/2 rounded-full object-cover my-5 mx-auto ">
             </div>
             <div class="w-full self-end px-4 py-5 lg:w-1/2">
-                <h3 class="text-2xl font-semibold text-white mb-1">Kemampuan</h3>
-                <p class="text-white text-justify">Saya memiliki kemampuan IT Support dan troubleshooting perangkat keras dan lunak, serta kemampuan dalam pengembangan perangkat lunak sebagai full-stack developer. Teknologi yang saya kuasai meliputi HTML, CSS, JavaScript, PHP, MySQL, serta framework seperti Laravel.</p>
+                <h3 class="text-2xl font-semibold mb-1 text-[#254ABE]">Tentang saya</h3>
+                <p class=" text-justify">Saya adalah Seorang <span class="font-bold">IT</span>, memiliki pengalaman bekerja dengan perusahaan dan Alumni <span class="font-bold"><a href="https://www.itp.ac.id/" target="_blank" class=" hover:underline">Institut Teknologi Padang</a></span> dengan jurusan <span class="font-bold"><a href="https://itp.ac.id/teknik-informatika-s1" target="_blank" class=" hover:underline">Teknik Informatika</a></span> dengan pengalaman dalam pengembangan perangkat lunak khususnya dalam bidang web development dan pemecahan masalah teknis. Saya memiliki kemampuan IT Support dan troubleshooting perangkat keras dan lunak, serta kemampuan dalam pengembangan perangkat lunak sebagai full-stack developer. Teknologi yang saya kuasai meliputi HTML, CSS, JavaScript, PHP, MySQL, serta framework yaitu Laravel dan CodeIgniter.</p>
+                <div class=" flex flex-wrap py-5 ">
+                    <div class="w-full self-center lg:w-1/2">
+                         <h3 class="text-2xl font-semibold  mb-1 text-[#3B82F6]">Pendidikan</h3>
+                         <p>2021 - 2026</p>
+                         <p class="mb-10">Institut Teknologi Padang</p>
+
+                         <h3 class="text-2xl font-semibold mt-13 mb-1 text-[#3B82F6]">Kemampuan</h3>
+                         <div class="mx-4 w-[200px]">
+                            <div class=" flex justify-center items-center">
+                                <img src="img/logo_PHP.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300">
+                                <img src="img/Logo_Laravel.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300">
+                                <img src="img/Logo_Tailwind.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300">
+                                <img src="img/Logo_Javascript.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300">
+                                <img src="img/Logo_Mysql.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300">
+                            </div>
+                         </div>
+                        
+                    </div>
+                    <div class="w-full self-end lg:w-1/2">
+                         <h3 class="text-2xl font-semibold  mb-1 text-[#3B82F6]">Pengalaman kerja</h3>
+                         <ul class="list-disc">
+                            <li>
+                                <p>2024</p>
+                                <p>Komdigi Provinsi Sumatera Barat (Kerja Praktek)</p>
+                            </li>
+                            <li>
+                                <p>2021</p>
+                                <p>Toyota Intercom (IT Support)</p>
+                            </li>
+                            <li>
+                                <p>2020</p>
+                                <p>PT. Maju Bersama Telekomunikasi [Indihome] (Magang) </p>
+                            </li>
+                         </ul>
+                    </div>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, molestias. Laborum tenetur praesentium perspiciatis, iure fuga animi facilis beatae provident qui cumque, nemo, fugit iste ullam at architecto officia quis.</p>
             </div>
         </div>
      </section>
-     <!-- Tentang Saya End -->
-
-     <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
-        <path d="M 0,600 L 0,150 C 118.54545454545453,155.3397129186603 237.09090909090907,160.6794258373206 323,159 C 408.90909090909093,157.3205741626794 462.18181818181824,148.62200956937798 553,139 C 643.8181818181818,129.37799043062202 772.1818181818181,118.83253588516749 888,128 C 1003.8181818181819,137.1674641148325 1107.0909090909092,166.04784688995215 1197,173 C 1286.9090909090908,179.95215311004785 1363.4545454545455,164.97607655502392 1440,150 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#2596be" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 300)"></path><path d="M 0,600 L 0,350 C 114.02870813397132,319.08133971291863 228.05741626794264,288.1626794258373 333,308 C 437.94258373205736,327.8373205741627 533.7990430622009,398.4306220095694 624,405 C 714.2009569377991,411.5693779904306 798.7464114832537,354.1148325358852 881,335 C 963.2535885167463,315.8851674641148 1043.2153110047846,335.1100478468899 1136,344 C 1228.7846889952154,352.8899521531101 1334.3923444976076,351.444976076555 1440,350 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#2596be" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 300)">
-        </path>
-     </svg>
-    <!-- Waves End -->
+    <!-- Tentang saya End -->
 
     <!-- Pengalaman -->
         <section id="pengalaman" class="py-15 mb-30">
@@ -109,7 +143,7 @@
      <section id="portofolio" class="py-15 mb-20 bg-[#2596be]/20">
         <h2 class="text-2xl text-center font-bold text-[#254ABE] px-7 mb-2">Portofolio</h2>
         <h3 class="text-5xl text-center font-semibold text-[#2596be]">Project</h3>
-        <p class="text-gray-500 text-center text-lg font-semibold mt-5">Beberapa project yang telah saya kembangkan.</p>
+        <p class="text-gray-500 text-center text-lg font-semibold mt-2">Beberapa project yang telah saya kembangkan.</p>
         <div class="flex flex-wrap px-4 mt-20">
             <div class="w-full self-center px-4 lg:w-1/2 py-10">
                 <img src="img/Project_MenaraSumbar.png" alt="Project Menara Sumbar" class="w-full rounded-lg object-cover">
@@ -125,11 +159,43 @@
      </section>
     <!-- Portofolio End -->
 
+    <!-- Waves -->
+     <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+        <path d="M 0,600 L 0,150 C 92.60287081339715,145.54066985645932 185.2057416267943,141.08133971291866 270,126 C 354.7942583732057,110.91866028708134 431.77990430622003,85.2153110047847 544,109 C 656.22009569378,132.7846889952153 803.6746411483253,206.05741626794256 898,207 C 992.3253588516747,207.94258373205744 1033.5215311004786,136.555023923445 1115,115 C 1196.4784688995214,93.44497607655502 1318.2392344497607,121.7224880382775 1440,150 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#3B82F6" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><path d="M 0,600 L 0,350 C 69.45454545454547,374.96650717703346 138.90909090909093,399.933014354067 241,371 C 343.09090909090907,342.066985645933 477.81818181818176,259.2344497607656 592,275 C 706.1818181818182,290.7655502392344 799.818181818182,405.12918660287085 897,420 C 994.181818181818,434.87081339712915 1094.909090909091,350.2488038277512 1186,322 C 1277.090909090909,293.7511961722488 1358.5454545454545,321.8755980861244 1440,350 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#3B82F6" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1">
+        </path>
+     </svg>
+    <!-- Waves End -->
+
     <!-- Kontak -->
-     <section id="kontak" class="py-15">
-        <p class="text-center">Kontak</p>
+     <section id="kontak" class="py-15 bg-[#3B82F6]">
+        <div class="flex items-center text-center px-4">
+            <div class="w-full self-center px-4">
+                <h3 class="text-5xl font-semibold text-white">Kontak</h3>
+                <p class="text-gray-300 text-lg font-semibold mt-2">Anda dapat menghubungi saya melalui media sosial berikut.</p>
+                <div flex class="flex justify-center items-center mt-10 space-x-10">
+                    <a href="https://www.instagram.com/erlannn.s/" target="_blank">
+                        <div class=" bg-gradient-to-tr from-pink-500 to-purple-500 rounded-full p-1 hover:from-pink-400 hover:to-purple-400 duration-300">
+                            <img src="img/Logo_Instagram.png" alt="Logo Instagram" class="w-[80px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300">
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:ahmaderlan014@gmail.com">
+                        <div class=" bg-gradient-to-tr from-pink-500 to-red-400 rounded-full p-1 hover:from-pink-400 hover:to-red-400 duration-300">
+                            <img src="img/Logo_Email.png" alt="Logo Email" class="w-[80px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Kontak End -->
+
+    <!-- Waves -->
+     <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+        <path d="M 0,600 L 0,150 C 118.54545454545453,155.3397129186603 237.09090909090907,160.6794258373206 323,159 C 408.90909090909093,157.3205741626794 462.18181818181824,148.62200956937798 553,139 C 643.8181818181818,129.37799043062202 772.1818181818181,118.83253588516749 888,128 C 1003.8181818181819,137.1674641148325 1107.0909090909092,166.04784688995215 1197,173 C 1286.9090909090908,179.95215311004785 1363.4545454545455,164.97607655502392 1440,150 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#3B82F6" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 300)"></path><path d="M 0,600 L 0,350 C 114.02870813397132,319.08133971291863 228.05741626794264,288.1626794258373 333,308 C 437.94258373205736,327.8373205741627 533.7990430622009,398.4306220095694 624,405 C 714.2009569377991,411.5693779904306 798.7464114832537,354.1148325358852 881,335 C 963.2535885167463,315.8851674641148 1043.2153110047846,335.1100478468899 1136,344 C 1228.7846889952154,352.8899521531101 1334.3923444976076,351.444976076555 1440,350 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#3B82F6" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 300)">
+        </path>
+     </svg>
+    <!-- Waves End -->
 
     <!-- Footer -->
     <footer class="bg-[#2596be]/20 py-10">
