@@ -18,6 +18,109 @@
     <style>
         body {
             font-family: 'Rubik', sans-serif;
+            background-color: #f8fafc;
+            color: #111827;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: #0b1220;
+            color: #e5e7eb;
+        }
+
+        body.dark-mode #site-nav {
+            border-bottom: 1px solid rgba(96, 165, 250, 0.25);
+        }
+
+        body.dark-mode #mobile-menu {
+            border-top-color: rgba(96, 165, 250, 0.3);
+        }
+
+        body.dark-mode #pengalaman {
+            background-color: rgba(37, 99, 235, 0.15);
+        }
+
+        body.dark-mode #portofolio article {
+            background-color: rgba(17, 24, 39, 0.85);
+            border-color: #60a5fa;
+        }
+
+        body.dark-mode footer {
+            background-color: rgba(30, 58, 138, 0.2);
+        }
+
+        body.dark-mode .text-gray-500,
+        body.dark-mode .text-gray-700,
+        body.dark-mode .text-gray-300 {
+            color: #d1d5db !important;
+        }
+
+        body.dark-mode a:hover {
+            opacity: 0.9;
+        }
+
+        .theme-toggle {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 9999px;
+            border: 1px solid rgba(37, 74, 190, 0.35);
+            color: #254abe;
+            background: transparent;
+            transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-1px);
+            background-color: rgba(37, 74, 190, 0.1);
+        }
+
+        .theme-toggle__icon {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.35s ease, opacity 0.35s ease;
+        }
+
+        .theme-toggle .icon-sun {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+
+        .theme-toggle .icon-moon {
+            opacity: 0;
+            transform: rotate(-30deg) scale(0.7);
+        }
+
+        .theme-toggle.is-dark {
+            color: #e2e8f0;
+            border-color: rgba(148, 163, 184, 0.6);
+            background-color: rgba(51, 65, 85, 0.45);
+        }
+
+        .theme-toggle.is-dark .icon-sun {
+            opacity: 0;
+            transform: rotate(35deg) scale(0.7);
+        }
+
+        .theme-toggle.is-dark .icon-moon {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            white-space: nowrap;
         }
     </style>
 </head>
@@ -32,11 +135,30 @@
         <nav id="site-nav" class="bg-gray-100/70 backdrop-blur-sm transition-all duration-300">
             <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
                 <a href="#beranda" class="text-lg font-bold text-[#254ABE]">Erlan</a>
-                <button id="mobile-menu-button" type="button" class="inline-flex items-center rounded-md p-2 text-[#254ABE] hover:bg-[#254ABE]/10 lg:hidden" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+                <div class="flex items-center gap-2">
+                    <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Aktifkan dark mode" title="Aktifkan dark mode">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="theme-toggle__icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="m4.93 4.93 1.41 1.41"></path>
+                            <path d="m17.66 17.66 1.41 1.41"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="m6.34 17.66-1.41 1.41"></path>
+                            <path d="m19.07 4.93-1.41 1.41"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="theme-toggle__icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3a7 7 0 1 0 9 9 9 9 0 1 1-9-9z"></path>
+                        </svg>
+                        <span class="sr-only">Ubah tema</span>
+                    </button>
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center rounded-md p-2 text-[#254ABE] hover:bg-[#254ABE]/10 lg:hidden" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
                 <ul class="hidden items-center gap-7 font-semibold text-[#254ABE] lg:flex">
                     <li><a href="#beranda" class="hover:text-blue-700">Beranda</a></li>
                     <li><a href="#tentangsaya" class="hover:text-blue-700">Tentang Saya</a></li>
@@ -104,15 +226,15 @@
                          <p class="mb-10">Institut Teknologi Padang</p>
 
                          <h3 class="text-2xl font-semibold mt-13 mb-1 text-[#3B82F6]">Kemampuan</h3>
-                                 <div class="mx-auto w-full max-w-[250px] sm:mx-4 sm:w-[250px]">
-                                     <div class="flex flex-wrap justify-center items-center">
-                                <img src="img/logo_Bahasa.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
+                        <div class="mx-auto w-full max-w-[250px] sm:mx-4 sm:w-[250px]">
+                            <div class="flex flex-wrap justify-center items-center">
+                                <img src="img/Logo_Bahasa.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
                                 <img src="img/Logo_Laravel.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
                                 <img src="img/Logo_Tailwind.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
                                 <img src="img/Logo_Javascript.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
                                 <img src="img/Logo_Mysql.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
                             </div>
-                         </div>
+                        </div>
                         
                     </div>
                     <div class="w-full self-end lg:w-1/2">
@@ -133,7 +255,7 @@
                          </ul>
                     </div>
                 </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, molestias. Laborum tenetur praesentium perspiciatis, iure fuga animi facilis beatae provident qui cumque, nemo, fugit iste ullam at architecto officia quis.</p>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, molestias. Laborum tenetur praesentium perspiciatis, iure fuga animi facilis beatae provident qui cumque, nemo, fugit iste ullam at architecto officia quis.</p> -->
             </div>
         </div>
      </section>
