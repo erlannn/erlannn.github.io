@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+
+    <meta name="title" content="Ahmad Erlan Saputra">
+    <meta name="description" content="Portofolio Ahmad Erlan Saputra - IT, Web Development, Alumni Institut Teknologi Padang">
+    <meta name="keywords" content="Ahmad Erlan Saputra, Portofolio, IT, Web Development, IT Support, Institut Teknologi Padang, Teknik Informatika">
+    <meta name="author" content="Ahmad Erlan Saputra">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="main.js" defer></script>
     <link rel="icon" type="image/jpeg" sizes="16x16" href="img/Logo.jpeg">
 
     <!-- Font -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <!-- Font End -->
 
     <title>Portofolio | Ahmad Erlan Saputra</title>
@@ -43,10 +51,6 @@
         body.dark-mode #portofolio article {
             background-color: rgba(17, 24, 39, 0.85);
             border-color: #60a5fa;
-        }
-
-        body.dark-mode footer {
-            background-color: rgba(30, 58, 138, 0.2);
         }
 
         body.dark-mode .text-gray-500,
@@ -122,7 +126,97 @@
             border: 0;
             white-space: nowrap;
         }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+            will-change: opacity, transform;
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(37, 74, 190, 0.12);
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        .contact-link-card {
+            background: rgba(255, 255, 255, 0.62);
+            border: 1px solid rgba(37, 74, 190, 0.12);
+            transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .contact-link-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        body.dark-mode .contact-link-card {
+            background: rgba(15, 23, 42, 0.55);
+            border-color: rgba(96, 165, 250, 0.18);
+        }
+
+        body.dark-mode .contact-link-card:hover {
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        body.dark-mode #kontak {
+            background: #0b1220;
+        }
+
+        body.dark-mode .contact-card {
+            background: rgba(15, 23, 42, 0.72);
+            border-color: rgba(59, 130, 246, 0.18);
+            box-shadow: 0 20px 45px rgba(2, 6, 23, 0.35);
+        }
+
+        #kontak {
+            background: #f8fafc;
+        }
+
+        body.dark-mode footer {
+            background-color: #0b1220;
+            border-top-color: rgba(96, 165, 250, 0.12);
+        }
+
+        footer {
+            background-color: #eff6ff;
+            border-top: 1px solid rgba(96, 165, 250, 0.16);
+        }
+
+        body.dark-mode footer .text-slate-200,
+        body.dark-mode footer .text-gray-300,
+        body.dark-mode footer .text-slate-400 {
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-mode footer .text-sky-300 {
+            color: #93c5fd !important;
+        }
+
+        body.dark-mode footer .border-white\/10 {
+            border-color: rgba(148, 163, 184, 0.14);
+        }
+
+        body.dark-mode footer .bg-white\/5 {
+            background-color: rgba(15, 23, 42, 0.45);
+        }
+
+        .footer-link {
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        .footer-link:hover {
+            transform: translateX(2px);
+        }
     </style>
+    
 </head>
 <body >
 
@@ -184,9 +278,9 @@
     <section id="beranda" class="py-8 md:py-12">
         <div class="mx-auto flex max-w-6xl flex-wrap p-4">
             <div class="w-full self-center px-2 sm:px-4 lg:w-1/2">
-                <h2 class="text-2xl font-semibold text-[#254ABE] sm:text-3xl">Hi! Selamat datang di portofolio saya</h2>
-                <h1 class="mb-1 text-4xl font-bold sm:text-5xl">Ahmad Erlan Saputra</h1>
-                <h1 class="mb-4 text-xl font-semibold sm:text-2xl">Alumni <a href="https://www.itp.ac.id/" class="text-[#254ABE] hover:text-blue-800 underline" target="_blank">Institut Teknologi Padang</a></h1>
+                <h1 class="text-2xl font-semibold text-[#254ABE] sm:text-3xl">Hi! Selamat datang di portofolio saya</h1>
+                <h2 class="mb-1 text-4xl font-bold sm:text-5xl">Ahmad Erlan Saputra</h2>
+                <h2 class="mb-4 text-xl font-semibold sm:text-2xl">Alumni <a href="https://www.itp.ac.id/" class="text-[#254ABE] hover:text-blue-800 underline" target="_blank">Institut Teknologi Padang</a></h2>
                 <p class="text-sm text-gray-500 font-semibold text-justify sm:text-base">Pada halaman portofolio saya anda dapat menemukan informasi tentang saya, pengalaman, dan cara menghubungi saya.</p>
 
                 <a href="#kontak" class="inline-block mt-4">
@@ -210,18 +304,28 @@
     </section>
     <!-- Beranda End -->
 
+    <!-- SEO -->
+     <!-- <a href="https://www.seobility.net/en/seocheck/check?url=https%3A%2F%2Ferlannn.github.io%2F"><img src="https://app.seobility.net/widget/widget.png?url=https%3A%2F%2Ferlannn.github.io%2F" alt="Seobility Score for erlannn.github.io"></a> -->
+    <!-- SEO END -->
+     
+
+
     <!-- Tentang Saya -->
     <section id="tentangsaya" class="py-10 md:py-14">
         <div class="mx-auto flex max-w-6xl flex-wrap px-4">
-            <div class="w-full self-center px-2 sm:px-4 lg:w-1/2">
+            <div class="w-full self-center px-2 sm:px-4 lg:w-1/2 ">
                 <img src="img/L.png" alt="Erlan" class="my-5 mx-auto w-2/3 rounded-full object-cover sm:w-1/2" loading="lazy" decoding="async">
+                <!-- <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam in, vero id iste doloremque laboriosam saepe ea odio ex earum ad voluptatum qui impedit magni? Incidunt consectetur quod optio delectus!
+                    Praesentium sequi natus sapiente velit ad officiis, accusamus nesciunt fuga quisquam. Doloribus asperiores tempore eum molestias libero? Molestias excepturi id unde ipsum maiores, saepe mollitia natus, dolorem doloribus magnam in.</p>
+                </div> -->
             </div>
-            <div class="w-full self-end px-2 py-5 sm:px-4 lg:w-1/2">
+            <div class="w-full self-end px-2 py-5 sm:px-4 lg:w-1/2 ">
                 <h3 class="text-2xl font-semibold mb-1 text-[#254ABE]">Tentang saya</h3>
-                <p class=" text-justify">Saya adalah Seorang <span class="font-bold">IT</span>, memiliki pengalaman bekerja dengan perusahaan dan Alumni <span class="font-bold"><a href="https://www.itp.ac.id/" target="_blank" class=" hover:underline">Institut Teknologi Padang</a></span> dengan jurusan <span class="font-bold"><a href="https://itp.ac.id/teknik-informatika-s1" target="_blank" class=" hover:underline">Teknik Informatika</a></span> dengan pengalaman dalam pengembangan perangkat lunak khususnya dalam bidang web development dan pemecahan masalah teknis. Saya memiliki kemampuan IT Support dan troubleshooting perangkat keras dan lunak, serta kemampuan dalam pengembangan perangkat lunak sebagai full-stack developer. Teknologi yang saya kuasai meliputi HTML, CSS, JavaScript, PHP, MySQL, serta framework yaitu Laravel dan CodeIgniter.</p>
+                <p class=" text-justify tracking-tighter">Saya adalah Seorang <span class="font-bold">IT</span>, memiliki pengalaman bekerja dengan perusahaan dan Alumni <span class="font-bold"><a href="https://www.itp.ac.id/" target="_blank" class=" hover:underline">Institut Teknologi Padang</a></span> dengan jurusan <span class="font-bold"><a href="https://itp.ac.id/teknik-informatika-s1" target="_blank" class=" hover:underline">Teknik Informatika</a></span> dengan pengalaman dalam pengembangan perangkat lunak khususnya dalam bidang web development dan pemecahan masalah teknis. Saya memiliki kemampuan IT Support dan troubleshooting perangkat keras dan lunak, serta kemampuan dalam pengembangan perangkat lunak sebagai full-stack developer. Teknologi yang saya kuasai meliputi HTML, CSS, JavaScript, PHP, MySQL, serta framework yaitu Laravel dan CodeIgniter.</p>
                 <div class="flex flex-wrap gap-y-8 py-5">
                     <div class="w-full self-center lg:w-1/2">
-                         <h3 class="text-2xl font-semibold  mb-1 text-[#3B82F6]">Pendidikan</h3>
+                         <h3 class="text-2xl font-semibold mb-1 text-[#3B82F6]">Pendidikan</h3>
                          <p>2021 - 2026</p>
                          <p class="mb-10">Institut Teknologi Padang</p>
 
@@ -246,7 +350,7 @@
                             </li>
                             <li>
                                 <p>2021</p>
-                                <p>Toyota Intercom (IT Support)</p>
+                                <p>Toyota Intercom Padang (IT Support)</p>
                             </li>
                             <li>
                                 <p>2020</p>
@@ -298,47 +402,183 @@
      </section>
     <!-- Portofolio End -->
 
-    <!-- Waves -->
-     <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
-        <path d="M 0,600 L 0,150 C 92.60287081339715,145.54066985645932 185.2057416267943,141.08133971291866 270,126 C 354.7942583732057,110.91866028708134 431.77990430622003,85.2153110047847 544,109 C 656.22009569378,132.7846889952153 803.6746411483253,206.05741626794256 898,207 C 992.3253588516747,207.94258373205744 1033.5215311004786,136.555023923445 1115,115 C 1196.4784688995214,93.44497607655502 1318.2392344497607,121.7224880382775 1440,150 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#3B82F6" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><path d="M 0,600 L 0,350 C 69.45454545454547,374.96650717703346 138.90909090909093,399.933014354067 241,371 C 343.09090909090907,342.066985645933 477.81818181818176,259.2344497607656 592,275 C 706.1818181818182,290.7655502392344 799.818181818182,405.12918660287085 897,420 C 994.181818181818,434.87081339712915 1094.909090909091,350.2488038277512 1186,322 C 1277.090909090909,293.7511961722488 1358.5454545454545,321.8755980861244 1440,350 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#3B82F6" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1">
-        </path>
-     </svg>
-    <!-- Waves End -->
+    <!-- Kontak - Fresh Design -->
+    <section id="kontak" class="relative min-h-screen w-full overflow-hidden py-20 md:py-32 bg-gradient-to-br from-[#f8fafc] via-[#f0f4ff] to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+        <!-- Animated background elements -->
+        <div class="absolute top-1/8 right-0 h-96 w-96 rounded-full bg-gradient-to-br from-[#254ABE]/20 to-[#3B82F6]/15 blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-gradient-to-tr from-[#2596be]/10 to-transparent blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/4 h-64 w-64 rounded-full bg-gradient-to-br from-sky-200/20 to-transparent blur-3xl dark:from-sky-900/30"></div>
 
-    <!-- Kontak -->
-     <section id="kontak" class="py-12 bg-[#3B82F6] md:py-16">
-        <div class="mx-auto flex max-w-6xl items-center text-center px-4">
-            <div class="w-full self-center px-4">
-                <h3 class="text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">Kontak</h3>
-                <p class="mt-2 text-base font-semibold text-gray-300 sm:text-lg">Anda dapat menghubungi saya melalui media sosial berikut.</p>
-                <div class="mt-10 flex flex-wrap justify-center items-center gap-8 sm:gap-10">
-                    <a href="https://www.instagram.com/erlannn.s/" target="_blank">
-                        <div class=" bg-gradient-to-tr from-pink-500 to-purple-500 rounded-full p-1 hover:from-pink-400 hover:to-purple-400 duration-300">
-                            <img src="img/Logo_Instagram.png" alt="Logo Instagram" class="w-[68px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300 sm:w-[80px]" loading="lazy" decoding="async">
-                        </div>
-                    </a>
-                    
-                    <a href="mailto:ahmaderlan014@gmail.com">
-                        <div class=" bg-gradient-to-tr from-pink-500 to-red-400 rounded-full p-1 hover:from-pink-400 hover:to-red-400 duration-300">
-                            <img src="img/Logo_Email.png" alt="Logo Email" class="w-[68px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300 sm:w-[80px]" loading="lazy" decoding="async">
-                        </div>
-                    </a>
+        <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <!-- Header Section -->
+            <div class="mb-16 text-center reveal-on-scroll">
+                <div class="inline-flex items-center gap-3 rounded-full bg-[#254ABE]/10 dark:bg-sky-400/10 px-4 py-2 mb-6">
+                    <div class="h-2 w-2 rounded-full bg-[#254ABE] dark:bg-sky-300"></div>
+                    <span class="text-sm font-semibold text-[#254ABE] dark:text-sky-300">HUBUNGI SAYA</span>
                 </div>
+                <h2 class="text-5xl md:text-6xl font-black bg-gradient-to-r from-[#254ABE] via-[#3B82F6] to-[#2596be] bg-clip-text text-transparent dark:from-sky-300 dark:via-blue-300 dark:to-cyan-300 mb-6 leading-tight">
+                    Siap Berkolaborasi
+                </h2>
+                <p class="mx-auto max-w-2xl text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
+                    Hubungi saya untuk diskusi project, partnership, atau sekadar menyapa. Saya aktif di berbagai platform dan siap merespons Anda.
+                </p>
+            </div>
+
+            <!-- Contact Grid - Modern Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+                <!-- Email Card -->
+                <a href="mailto:ahmaderlan014@gmail.com" class="group reveal-on-scroll">
+                    <div class="relative h-full rounded-2xl border border-[#254ABE]/50 dark:border-slate-700/50 bg-gradient-to-br from-[#254ABE]/15 to-[#f0f4ff] dark:from-[#254ABE]/20 dark:to-[#3B82F6]/10 backdrop-blur-xl hover:border-[#254ABE] dark:hover:border-sky-400 transition-all duration-500 overflow-hidden p-8 shadow-lg hover:shadow-xl hover:shadow-[#254ABE]/20">
+                        <!-- Gradient overlay on hover -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#254ABE]/8 to-transparent pointer-events-none"></div>
+                        
+                        <div class="relative z-20">
+                            <div class="mb-6">
+                                <div class="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[#254ABE]/20 to-[#3B82F6]/10 group-hover:from-[#254ABE]/30 group-hover:to-[#3B82F6]/20 transition-all duration-300 shadow-md">
+                                    <img src="img/Logo_Email.png" alt="Email" class="h-10 w-10 object-contain group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#254ABE] dark:group-hover:text-sky-300 transition-colors">Email</h3>
+                            <p class="text-[#254ABE] dark:text-sky-300 font-semibold text-base mb-3">ahmaderlan014@gmail.com</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Hubungi saya untuk diskusi formal dan project inquiry.</p>
+                            <div class="mt-6 flex items-center gap-2 text-[#254ABE] dark:text-sky-300 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2">
+                                <span class="text-sm font-semibold">Kirim Email</span>
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Instagram Card -->
+                <a href="https://www.instagram.com/erlannn.s/" target="_blank" class="group reveal-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="relative h-full rounded-2xl border border-[#254ABE]/50 dark:border-slate-700/50 bg-gradient-to-br from-[#254ABE]/15 to-[#f0f4ff] dark:from-[#254ABE]/20 dark:to-[#3B82F6]/10 backdrop-blur-xl hover:border-[#254ABE] dark:hover:border-[#E1306C]/50 transition-all duration-500 overflow-hidden p-8 shadow-lg hover:shadow-xl hover:shadow-[#254ABE]/20">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#254ABE]/8 to-transparent pointer-events-none"></div>
+                        
+                        <div class="relative z-20">
+                            <div class="mb-6">
+                                <div class="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[#254ABE]/20 to-[#3B82F6]/10 group-hover:from-[#254ABE]/30 group-hover:to-[#3B82F6]/20 transition-all duration-300 shadow-md">
+                                    <img src="img/Logo_Instagram.png" alt="Instagram" class="h-10 w-10 object-contain group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#254ABE] transition-colors">Instagram</h3>
+                            <p class="text-[#254ABE] dark:text-pink-400 font-semibold text-base mb-3">@erlannn.s</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Ikuti untuk update konten, tips tech, dan inspirasi sehari-hari.</p>
+                            <div class="mt-6 flex items-center gap-2 text-[#254ABE] dark:text-pink-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2">
+                                <span class="text-sm font-semibold">Follow Sekarang</span>
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- GitHub Card -->
+                <a href="" class="group reveal-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="relative h-full rounded-2xl border border-[#254ABE]/50 dark:border-slate-700/50 bg-gradient-to-br from-[#254ABE]/15 to-[#f0f4ff] dark:from-[#254ABE]/20 dark:to-[#3B82F6]/10 backdrop-blur-xl hover:border-[#254ABE] dark:hover:border-white/50 transition-all duration-500 overflow-hidden p-8 shadow-lg hover:shadow-xl hover:shadow-[#254ABE]/20">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#254ABE]/8 to-transparent dark:from-white/5 pointer-events-none"></div>
+                        
+                        <div class="relative z-20">
+                            <div class="mb-6">
+                                <div class="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[#254ABE]/20 to-[#3B82F6]/10 dark:from-white/15 dark:to-white/5 group-hover:from-[#254ABE]/30 group-hover:to-[#3B82F6]/20 dark:group-hover:from-white/25 dark:group-hover:to-white/15 transition-all duration-300 shadow-md">
+                                    <svg class="h-10 w-10 text-[#254ABE] dark:text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#254ABE] dark:group-hover:text-sky-300 transition-colors">GitHub</h3>
+                            <p class="text-[#254ABE] dark:text-gray-300 font-semibold text-base mb-3">View My Code</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Lihat project, repository, dan kontribusi open source saya.</p>
+                            <div class="mt-6 flex items-center gap-2 text-[#254ABE] dark:text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2">
+                                <span class="text-sm font-semibold">Kunjungi Profile</span>
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- LinkedIn Card -->
+                <a href="" class="group reveal-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="relative h-full rounded-2xl border border-[#254ABE]/50 dark:border-slate-700/50 bg-gradient-to-br from-[#254ABE]/15 to-[#f0f4ff] dark:from-[#254ABE]/20 dark:to-[#3B82F6]/10 backdrop-blur-xl hover:border-[#254ABE] dark:hover:border-[#0A66C2]/50 transition-all duration-500 overflow-hidden p-8 shadow-lg hover:shadow-xl hover:shadow-[#254ABE]/20">
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#254ABE]/8 to-transparent pointer-events-none"></div>
+                        
+                        <div class="relative z-20">
+                            <div class="mb-6">
+                                <div class="inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-[#254ABE]/20 to-[#3B82F6]/10 group-hover:from-[#254ABE]/30 group-hover:to-[#3B82F6]/20 transition-all duration-300 shadow-md">
+                                    <svg class="h-10 w-10 text-[#254ABE] group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.25-.129.599-.129.948v5.439h-3.554s.047-8.733 0-9.635h3.554v1.366c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.492zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.707 0-.968.77-1.708 1.971-1.708 1.144 0 1.914.74 1.938 1.708 0 .949-.794 1.707-1.994 1.707zm1.582 11.019H3.771V9.817h3.148v10.635zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-[#254ABE] dark:group-hover:text-blue-400 transition-colors">LinkedIn</h3>
+                            <p class="text-[#254ABE] dark:text-blue-400 font-semibold text-base mb-3">Connect Professionally</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Mari terhubung di platform profesional dan share pengalaman.</p>
+                            <div class="mt-6 flex items-center gap-2 text-[#254ABE] dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2">
+                                <span class="text-sm font-semibold">Lihat Profil</span>
+                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
     <!-- Kontak End -->
 
-    <!-- Waves -->
-     <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
-        <path d="M 0,600 L 0,150 C 118.54545454545453,155.3397129186603 237.09090909090907,160.6794258373206 323,159 C 408.90909090909093,157.3205741626794 462.18181818181824,148.62200956937798 553,139 C 643.8181818181818,129.37799043062202 772.1818181818181,118.83253588516749 888,128 C 1003.8181818181819,137.1674641148325 1107.0909090909092,166.04784688995215 1197,173 C 1286.9090909090908,179.95215311004785 1363.4545454545455,164.97607655502392 1440,150 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#3B82F6" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 300)"></path><path d="M 0,600 L 0,350 C 114.02870813397132,319.08133971291863 228.05741626794264,288.1626794258373 333,308 C 437.94258373205736,327.8373205741627 533.7990430622009,398.4306220095694 624,405 C 714.2009569377991,411.5693779904306 798.7464114832537,354.1148325358852 881,335 C 963.2535885167463,315.8851674641148 1043.2153110047846,335.1100478468899 1136,344 C 1228.7846889952154,352.8899521531101 1334.3923444976076,351.444976076555 1440,350 L 1440,600 L 0,600 Z" stroke="none" stroke-width="0" fill="#3B82F6" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 300)">
-        </path>
-     </svg>
-    <!-- Waves End -->
-
     <!-- Footer -->
-    <footer class="bg-[#2596be]/20 py-10">
-        <p class="font-semibold text-center">Dibuat oleh <a href="https://www.instagram.com/erlannn.s/" target="_blank" class="text-[#254ABE] hover:underline">Ahmad Erlan Saputra</a>, Menggunakan <span class="text-cyan-500 hover:underline"><a href="https://www.tailwindcss.com/" target="_blank">Tailwind CSS</a></span>.</p>
+    <footer class="transition-colors duration-300 text-gray-700">
+        <div class="mx-auto max-w-6xl px-4 py-10 md:py-12">
+            <div class="reveal-on-scroll grid gap-8 md:grid-cols-3">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#254ABE] dark:text-sky-300">Ahmad Erlan Saputra</p>
+                    <p class="mt-4 max-w-sm text-sm leading-7 text-slate-600 dark:text-gray-300">Portofolio pribadi untuk menampilkan pengalaman, proyek, dan cara terbaik untuk terhubung secara profesional.</p>
+                </div>
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#254ABE] dark:text-sky-300">Navigasi</p>
+                    <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-gray-300">
+                        <li><a href="#beranda" class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Beranda</a></li>
+                        <li><a href="#tentangsaya" class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Tentang Saya</a></li>
+                        <li><a href="#portofolio" class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Portofolio</a></li>
+                        <li><a href="#kontak" class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#254ABE] dark:text-sky-300">Terhubung</p>
+                    <div class="mt-4 flex items-center gap-4">
+                        <a href="https://www.instagram.com/erlannn.s/" target="_blank" class="rounded-full border border-sky-200 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10" aria-label="Instagram Ahmad Erlan Saputra">
+                            <img src="img/Logo_Instagram.png" alt="Instagram" class="h-6 w-6" loading="lazy" decoding="async">
+                        </a>
+                        <a href="mailto:ahmaderlan014@gmail.com" class="rounded-full border border-sky-200 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10" aria-label="Email Ahmad Erlan Saputra">
+                            <img src="img/Logo_Email.png" alt="Email" class="h-6 w-6" loading="lazy" decoding="async">
+                        </a>
+                        <a href="" class="rounded-full border border-sky-200 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10" aria-label="GitHub Ahmad Erlan Saputra">
+                            <svg class="h-6 w-6 object-contain" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="" class="rounded-full border border-sky-200 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10" aria-label="LinkedIn Ahmad Erlan Saputra">
+                            <svg class="h-6 w-6 object-contain" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.25-.129.599-.129.948v5.439h-3.554s.047-8.733 0-9.635h3.554v1.366c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.492zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.707 0-.968.77-1.708 1.971-1.708 1.144 0 1.914.74 1.938 1.708 0 .949-.794 1.707-1.994 1.707zm1.582 11.019H3.771V9.817h3.148v10.635zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                            </svg>
+                        </a>
+                        <a href="" class="rounded-full border border-sky-200 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10" aria-label="WhatsApp Ahmad Erlan Saputra">
+                            <svg class="h-6 w-6 object-contain" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.425 0-2.835-.356-4.172-1.045l-.299-.149-3.095.623.666-3.11-.203-.32c-.726-1.154-1.11-2.48-1.11-3.851 0-4.786 3.887-8.673 8.673-8.673 2.313 0 4.489.902 6.12 2.539 1.631 1.636 2.53 3.81 2.53 6.122 0 4.787-3.887 8.673-8.673 8.673M19.5 3.651C17.865 2.028 15.687 1.126 13.374 1.126c-5.385 0-9.777 4.392-9.777 9.777 0 1.687.44 3.355 1.276 4.82L2.5 22.5l5.923-1.553c1.41.743 2.998 1.134 4.56 1.134 5.385 0 9.777-4.392 9.777-9.777 0-2.313-.902-4.49-2.54-6.122"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 border-t border-sky-200 pt-6 text-center text-sm text-slate-600 dark:border-white/10 dark:text-slate-400">
+                <p>Dibuat oleh <a href="https://www.instagram.com/erlannn.s/" target="_blank" class="footer-link font-semibold text-[#254ABE] hover:text-[#3B82F6] dark:text-sky-300 dark:hover:text-white">Ahmad Erlan Saputra</a> dengan <a href="https://www.tailwindcss.com/" target="_blank" class="footer-link font-semibold text-[#254ABE] hover:text-[#3B82F6] dark:text-sky-300 dark:hover:text-white">Tailwind CSS</a>.</p>
+            </div>
+        </div>
     </footer>
     <!-- Footer End -->
 </body>

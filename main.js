@@ -22,6 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
 	const initialTheme = storedTheme || (prefersDark.matches ? 'dark' : 'light');
 	applyTheme(initialTheme);
 
+	const revealElements = document.querySelectorAll('.reveal-on-scroll');
+	if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+		const revealObserver = new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('is-visible');
+					observer.unobserve(entry.target);
+				}
+			});
+		}, {
+			threshold: 0.18,
+			rootMargin: '0px 0px -80px 0px',
+		});
+
+		revealElements.forEach((element) => revealObserver.observe(element));
+	} else {
+		revealElements.forEach((element) => element.classList.add('is-visible'));
+	}
+
 	if (!menuButton || !mobileMenu) {
 		return;
 	}
@@ -91,3 +110,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	handleNavbarScroll();
 	window.addEventListener('scroll', handleNavbarScroll, { passive: true });
 });
+
