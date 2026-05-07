@@ -1,0 +1,191 @@
+body {
+            font-family: 'Rubik', sans-serif;
+            background-color: #f8fafc;
+            color: #111827;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: #0b1220;
+            color: #e5e7eb;
+        }
+
+        body.dark-mode #site-nav {
+            border-bottom: 1px solid rgba(96, 165, 250, 0.25);
+        }
+
+        body.dark-mode #mobile-menu {
+            border-top-color: rgba(96, 165, 250, 0.3);
+        }
+
+        body.dark-mode #pengalaman {
+            background-color: rgba(37, 99, 235, 0.15);
+        }
+
+        body.dark-mode #portofolio article {
+            background-color: rgba(17, 24, 39, 0.85);
+            border-color: #60a5fa;
+        }
+
+        body.dark-mode .text-gray-500,
+        body.dark-mode .text-gray-700,
+        body.dark-mode .text-gray-300 {
+            color: #d1d5db !important;
+        }
+
+        body.dark-mode a:hover {
+            opacity: 0.9;
+        }
+
+        .theme-toggle {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 9999px;
+            border: 1px solid rgba(37, 74, 190, 0.35);
+            color: #254abe;
+            background: transparent;
+            transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-1px);
+            background-color: rgba(37, 74, 190, 0.1);
+        }
+
+        .theme-toggle__icon {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.35s ease, opacity 0.35s ease;
+        }
+
+        .theme-toggle .icon-sun {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+
+        .theme-toggle .icon-moon {
+            opacity: 0;
+            transform: rotate(-30deg) scale(0.7);
+        }
+
+        .theme-toggle.is-dark {
+            color: #e2e8f0;
+            border-color: rgba(148, 163, 184, 0.6);
+            background-color: rgba(51, 65, 85, 0.45);
+        }
+
+        .theme-toggle.is-dark .icon-sun {
+            opacity: 0;
+            transform: rotate(35deg) scale(0.7);
+        }
+
+        .theme-toggle.is-dark .icon-moon {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            white-space: nowrap;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+            will-change: opacity, transform;
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(37, 74, 190, 0.12);
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+        }
+
+        .contact-link-card {
+            background: rgba(255, 255, 255, 0.62);
+            border: 1px solid rgba(37, 74, 190, 0.12);
+            transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .contact-link-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        body.dark-mode .contact-link-card {
+            background: rgba(15, 23, 42, 0.55);
+            border-color: rgba(96, 165, 250, 0.18);
+        }
+
+        body.dark-mode .contact-link-card:hover {
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        body.dark-mode #kontak {
+            background: #0b1220;
+        }
+
+        body.dark-mode .contact-card {
+            background: rgba(15, 23, 42, 0.72);
+            border-color: rgba(59, 130, 246, 0.18);
+            box-shadow: 0 20px 45px rgba(2, 6, 23, 0.35);
+        }
+
+        #kontak {
+            background: #f8fafc;
+        }
+
+        body.dark-mode footer {
+            background-color: #0b1220;
+            border-top-color: rgba(96, 165, 250, 0.12);
+        }
+
+        footer {
+            background-color: #eff6ff;
+            border-top: 1px solid rgba(96, 165, 250, 0.16);
+        }
+
+        body.dark-mode footer .text-slate-200,
+        body.dark-mode footer .text-gray-300,
+        body.dark-mode footer .text-slate-400 {
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-mode footer .text-sky-300 {
+            color: #93c5fd !important;
+        }
+
+        body.dark-mode footer .border-white\/10 {
+            border-color: rgba(148, 163, 184, 0.14);
+        }
+
+        body.dark-mode footer .bg-white\/5 {
+            background-color: rgba(15, 23, 42, 0.45);
+        }
+
+        .footer-link {
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        .footer-link:hover {
+            transform: translateX(2px);
+        }
