@@ -114,21 +114,21 @@ body {
         }
 
         .contact-card {
-            background: rgba(255, 255, 255, 0.82);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(37, 74, 190, 0.12);
-            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+            background: #ffffff;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(37, 74, 190, 0.08);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
         }
 
         .contact-link-card {
-            background: rgba(255, 255, 255, 0.62);
-            border: 1px solid rgba(37, 74, 190, 0.12);
+            background: #ffffff;
+            border: 1px solid rgba(37, 74, 190, 0.08);
             transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .contact-link-card:hover {
             transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.88);
+            background: #fbfdff;
         }
 
         body.dark-mode .contact-link-card {
@@ -160,8 +160,55 @@ body {
         }
 
         footer {
-            background-color: #eff6ff;
-            border-top: 1px solid rgba(96, 165, 250, 0.16);
+            background-color: #ffffff;
+            border-top: 1px solid rgba(37, 74, 190, 0.08);
+            color: #0f172a;
+        }
+
+        /* Contact section specific fixes (light mode) */
+        body:not(.dark-mode) #kontak .reveal-on-scroll h2{
+            color: #2596be !important;
+        }
+        body:not(.dark-mode) #kontak .reveal-on-scroll p {
+            color: #7c8186 !important;
+        }
+
+        body.dark-mode #kontak .reveal-on-scroll h2{
+            color: #2596be !important;
+        }
+        body.dark-mode #kontak .reveal-on-scroll p {
+            color: #ffffff !important;
+        }
+
+        /* Contact card styling for light and dark modes */
+        .contact-card-bg {
+            background-color: rgba(37, 150, 190, 0.2) !important;
+        }
+
+        body.dark-mode .contact-card-bg {
+            background-color: rgba(37, 99, 235, 0.15) !important;
+        }
+
+        .contact-icon {
+            color: #000 !important;
+        }
+
+        body.dark-mode .contact-icon {
+            color: #ffffff !important;
+        }
+
+        .contact-card-title {
+            color: #254ABE !important;
+        }
+
+        body.dark-mode .contact-card-title {
+            color: #254ABE !important;
+        }
+
+        /* Ensure contact cards in #kontak use solid light backgrounds and subtle borders */
+        #kontak a > div.rounded-lg {
+            background-color: #ffffff;
+            border-color: rgba(37, 74, 190, 0.08) !important;
         }
 
         body.dark-mode footer .text-slate-200,
