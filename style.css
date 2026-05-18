@@ -199,6 +199,40 @@ body {
             color: #0f172a;
         }
 
+        /* Footer typography and icon colors */
+        footer p.font-semibold {
+            color: #254ABE !important;
+        }
+
+        footer p:not(.font-semibold),
+        footer li {
+            color: #6B7280 !important; /* text-gray-500 */
+        }
+
+        footer svg {
+            fill: #254ABE !important;
+            color: #254ABE !important;
+        }
+
+        /* Dark mode overrides for footer */
+        body.dark-mode footer {
+            background-color: #0b1220 !important;
+        }
+
+        body.dark-mode footer p.font-semibold {
+            color: #254ABE !important;
+        }
+
+        body.dark-mode footer p:not(.font-semibold),
+        body.dark-mode footer li {
+            color: #D1D5DB !important; /* text-gray-300 */
+        }
+
+        body.dark-mode footer svg {
+            fill: #254ABE !important;
+            color: #254ABE !important;
+        }
+
         /* Contact section specific fixes (light mode) */
         body:not(.dark-mode) #kontak .reveal-on-scroll h2{
             color: #2596be !important;
@@ -251,9 +285,7 @@ body {
             color: #cbd5e1 !important;
         }
 
-        body.dark-mode footer .text-sky-300 {
-            color: #93c5fd !important;
-        }
+        
 
         body.dark-mode footer .border-white\/10 {
             border-color: rgba(148, 163, 184, 0.14);
