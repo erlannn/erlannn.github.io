@@ -113,6 +113,40 @@ body {
             transform: translateY(0);
         }
 
+        html.animejs-ready #beranda .hero-animate,
+        html.animejs-ready #beranda .hero-cta,
+        html.animejs-ready #beranda .hero-portrait,
+        html.animejs-ready #beranda .hero-shape,
+        html.animejs-ready #tentangsaya .about-animate,
+        html.animejs-ready #tentangsaya .about-visual,
+        html.animejs-ready #tentangsaya .skill-logo {
+            opacity: 0;
+            transform: translateY(18px);
+        }
+
+        html.animejs-ready #beranda .hero-portrait,
+        html.animejs-ready #beranda .hero-shape,
+        html.animejs-ready #tentangsaya .about-visual,
+        html.animejs-ready #tentangsaya .skill-logo {
+            transform: translateY(0);
+        }
+
+        html.animejs-ready #beranda .hero-portrait {
+            transform: translateX(22px) scale(0.94);
+        }
+
+        html.animejs-ready #beranda .hero-shape {
+            transform: translateX(-50%) scale(0.92);
+        }
+
+        html.animejs-ready #tentangsaya .about-visual {
+            transform: translateX(-18px) scale(0.94);
+        }
+
+        html.animejs-ready #tentangsaya .skill-logo {
+            transform: scale(0.7);
+        }
+
         .contact-card {
             background: #ffffff;
             backdrop-filter: blur(8px);

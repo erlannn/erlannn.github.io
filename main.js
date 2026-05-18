@@ -41,6 +41,146 @@ document.addEventListener('DOMContentLoaded', () => {
 		revealElements.forEach((element) => element.classList.add('is-visible'));
 	}
 
+	const animeAvailable = typeof window.anime === 'function';
+	const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+	const animationReadyClass = 'animejs-ready';
+
+	const disableAnimePrestate = () => {
+		document.documentElement.classList.remove(animationReadyClass);
+	};
+
+	const animateHeroSection = () => {
+		if (!animeAvailable || prefersReducedMotion.matches) {
+			disableAnimePrestate();
+			return;
+		}
+
+		anime.timeline({
+			easing: 'easeOutExpo',
+			duration: 700,
+		})
+			.add({
+				targets: '#beranda .hero-animate',
+				opacity: [0, 1],
+				translateY: [24, 0],
+				delay: anime.stagger(120),
+			})
+			.add({
+				targets: '#beranda .hero-cta',
+				opacity: [0, 1],
+				translateY: [16, 0],
+				scale: [0.96, 1],
+				duration: 550,
+			}, '-=420')
+			.add({
+				targets: '#beranda .hero-portrait',
+				opacity: [0, 1],
+				translateX: [28, 0],
+				scale: [0.92, 1],
+				duration: 850,
+			}, '-=680')
+			.add({
+				targets: '#beranda .hero-shape',
+				opacity: [0, 1],
+				scale: [0.9, 1],
+				duration: 800,
+			}, '-=620');
+	};
+
+	const animateAboutSection = () => {
+		if (!animeAvailable || prefersReducedMotion.matches) {
+			disableAnimePrestate();
+			return;
+		}
+
+		const aboutSection = document.getElementById('tentangsaya');
+		if (!aboutSection) {
+			return;
+		}
+
+		const skillLogos = aboutSection.querySelectorAll('.skill-logo');
+		let aboutAnimated = false;
+
+		const playAboutAnimation = () => {
+			if (aboutAnimated) {
+				return;
+			}
+
+			aboutAnimated = true;
+
+			anime.timeline({
+				easing: 'easeOutExpo',
+				duration: 650,
+			})
+				.add({
+					targets: '#tentangsaya .about-animate',
+					opacity: [0, 1],
+					translateY: [22, 0],
+					delay: anime.stagger(120),
+				})
+				.add({
+					targets: '#tentangsaya .about-visual',
+					opacity: [0, 1],
+					translateX: [-20, 0],
+					scale: [0.94, 1],
+					duration: 800,
+				}, '-=420')
+				.add({
+					targets: skillLogos,
+					opacity: [0, 1],
+					scale: [0.7, 1],
+					rotate: [-10, 0],
+					delay: anime.stagger(70),
+					duration: 700,
+				}, '-=360');
+		};
+
+		if ('IntersectionObserver' in window) {
+			const aboutObserver = new IntersectionObserver((entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						playAboutAnimation();
+						observer.disconnect();
+					}
+				});
+			}, {
+				threshold: 0.25,
+				rootMargin: '0px 0px -120px 0px',
+			});
+
+			aboutObserver.observe(aboutSection);
+		} else {
+			playAboutAnimation();
+		}
+
+		skillLogos.forEach((logo) => {
+			logo.addEventListener('mouseenter', () => {
+				anime.remove(logo);
+				anime({
+					targets: logo,
+					scale: 1.12,
+					rotate: 5,
+					duration: 220,
+					easing: 'easeOutQuad',
+				});
+			});
+
+			logo.addEventListener('mouseleave', () => {
+				anime.remove(logo);
+				anime({
+					targets: logo,
+					scale: 1,
+					rotate: 0,
+					duration: 260,
+					easing: 'easeOutQuad',
+				});
+			});
+		});
+	};
+
+	animateHeroSection();
+	animateAboutSection();
+
 	if (!menuButton || !mobileMenu) {
 		return;
 	}

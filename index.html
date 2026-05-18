@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script>
+        document.documentElement.classList.add('animejs-ready');
+    </script>
+
     <!-- SEO -->
 
     <meta name="title" content="Ahmad Erlan Saputra">
@@ -12,6 +16,7 @@
     <meta name="author" content="Ahmad Erlan Saputra">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js" defer></script>
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" sizes="16x16" href="img/Logo.jpeg">
@@ -85,22 +90,22 @@
     <section id="beranda" class="py-8 md:py-12">
         <div class="mx-auto flex max-w-6xl flex-wrap p-4">
             <div class="w-full self-center px-2 sm:px-4 lg:w-1/2">
-                <h1 class="text-2xl font-semibold text-[#254ABE] sm:text-3xl">Hi! Selamat datang di portofolio saya</h1>
-                <h2 class="mb-1 text-4xl font-bold sm:text-5xl">Ahmad Erlan Saputra</h2>
-                <h2 class="mb-4 text-xl font-semibold sm:text-2xl">Alumni <a href="https://www.itp.ac.id/" class="text-[#254ABE] hover:text-blue-800 underline" target="_blank">Institut Teknologi Padang</a></h2>
-                <p class="text-sm text-gray-500 font-semibold text-justify sm:text-base">Pada halaman portofolio saya anda dapat menemukan informasi tentang saya, pengalaman, dan cara menghubungi saya.</p>
+                <h1 class="hero-animate text-2xl font-semibold text-[#254ABE] sm:text-3xl">Hi! Selamat datang di portofolio saya</h1>
+                <h2 class="hero-animate mb-1 text-4xl font-bold sm:text-5xl">Ahmad Erlan Saputra</h2>
+                <h2 class="hero-animate mb-4 text-xl font-semibold sm:text-2xl">Alumni <a href="https://www.itp.ac.id/" class="text-[#254ABE] hover:text-blue-800 underline" target="_blank">Institut Teknologi Padang</a></h2>
+                <p class="hero-animate text-sm text-gray-500 font-semibold text-justify sm:text-base">Pada halaman portofolio saya anda dapat menemukan informasi tentang saya, pengalaman, dan cara menghubungi saya.</p>
 
                 <a href="#kontak" class="inline-block mt-4">
-                    <button type="button" class="bg-[#254ABE] hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
+                    <button type="button" class="hero-cta bg-[#254ABE] hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
                         Hubungi Saya
                     </button>
                 </a>
             </div>
             <div class="w-full self-end px-2 sm:px-4 lg:w-1/2">
                 <div class="relative mt-10 lg:mt-0 lg:right-0">
-                    <img src="img/Erlan.png" alt="Foto Profil" class="mx-auto w-72 rounded-full object-cover sm:w-96" fetchpriority="high" decoding="async">
+                    <img src="img/Erlan.png" alt="Foto Profil" class="hero-portrait mx-auto w-72 rounded-full object-cover sm:w-96" fetchpriority="high" decoding="async">
 
-                    <span class="absolute -bottom-0 -z-10 left-1/2 top-0 -translate-x-1/2">
+                    <span class="hero-shape absolute -bottom-0 -z-10 left-1/2 top-0 -translate-x-1/2">
                         <svg width="500" height="350" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#2596be" d="M54.5,-21.2C60.5,0.8,48.2,25.2,27.9,40.4C7.6,55.7,-20.9,61.8,-37.5,50.1C-54.1,38.4,-58.8,8.9,-50.6,-16.1C-42.4,-41.1,-21.2,-61.6,1.5,-62.1C24.2,-62.6,48.5,-43.1,54.5,-21.2Z" transform="translate(100 100) scale(1.2)"></path>
                         </svg>
@@ -119,47 +124,47 @@
     <section id="tentangsaya" class="py-10 md:py-14">
         <div class="mx-auto flex max-w-6xl flex-wrap px-4">
             <div class="w-full self-center px-2 sm:px-4 lg:w-1/2 ">
-                <img src="img/L.png" alt="Erlan" class="my-5 mx-auto w-2/3 rounded-full object-cover sm:w-1/2" loading="lazy" decoding="async">
+                <img src="img/L.png" alt="Erlan" class="about-visual my-5 mx-auto w-2/3 rounded-full object-cover sm:w-1/2" loading="lazy" decoding="async">
                 <!-- <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam in, vero id iste doloremque laboriosam saepe ea odio ex earum ad voluptatum qui impedit magni? Incidunt consectetur quod optio delectus!
                     Praesentium sequi natus sapiente velit ad officiis, accusamus nesciunt fuga quisquam. Doloribus asperiores tempore eum molestias libero? Molestias excepturi id unde ipsum maiores, saepe mollitia natus, dolorem doloribus magnam in.</p>
                 </div> -->
             </div>
             <div class="w-full self-end px-2 py-5 sm:px-4 lg:w-1/2 ">
-                <h3 class="text-2xl font-semibold mb-1 text-[#254ABE]">Tentang saya</h3>
-                <p class=" text-justify tracking-tighter">Saya adalah Seorang <span class="font-bold">IT</span>, memiliki pengalaman bekerja dengan perusahaan dan Alumni <span class="font-bold"><a href="https://www.itp.ac.id/" target="_blank" class=" hover:underline">Institut Teknologi Padang</a></span> dengan jurusan <span class="font-bold"><a href="https://itp.ac.id/teknik-informatika-s1" target="_blank" class=" hover:underline">Teknik Informatika</a></span> dengan pengalaman dalam pengembangan perangkat lunak khususnya dalam bidang web development dan pemecahan masalah teknis. Saya memiliki kemampuan IT Support dan troubleshooting perangkat keras dan lunak, serta kemampuan dalam pengembangan perangkat lunak sebagai full-stack developer. Teknologi yang saya kuasai meliputi HTML, CSS, JavaScript, PHP, MySQL, serta framework yaitu Laravel dan CodeIgniter.</p>
+                <h3 class="about-animate text-2xl font-semibold mb-1 text-[#254ABE]">Tentang saya</h3>
+                <p class="about-animate text-justify tracking-tighter">Saya adalah Seorang <span class="font-bold">IT</span>, memiliki pengalaman bekerja dengan perusahaan dan Alumni <span class="font-bold"><a href="https://www.itp.ac.id/" target="_blank" class=" hover:underline">Institut Teknologi Padang</a></span> dengan jurusan <span class="font-bold"><a href="https://itp.ac.id/teknik-informatika-s1" target="_blank" class=" hover:underline">Teknik Informatika</a></span> dengan pengalaman dalam pengembangan perangkat lunak khususnya dalam bidang web development dan pemecahan masalah teknis. Saya memiliki kemampuan IT Support dan troubleshooting perangkat keras dan lunak, serta kemampuan dalam pengembangan perangkat lunak sebagai full-stack developer. Teknologi yang saya kuasai meliputi HTML, CSS, JavaScript, PHP, MySQL, serta framework yaitu Laravel dan CodeIgniter.</p>
                 <div class="flex flex-wrap gap-y-8 py-5">
                     <div class="w-full self-center lg:w-1/2">
-                         <h3 class="text-2xl font-semibold mb-1 text-[#3B82F6]">Pendidikan</h3>
+                         <h3 class="text-2xl font-semibold text-[#3B82F6]">Pendidikan</h3>
                          <p>2021 - 2026</p>
                          <p class="mb-10">Institut Teknologi Padang</p>
 
-                         <h3 class="text-2xl font-semibold mt-13 mb-1 text-[#3B82F6]">Kemampuan</h3>
+                         <h3 class="text-2xl font-semibold  text-[#3B82F6]">Kemampuan</h3>
                         <div class="mx-auto w-full max-w-[250px] sm:mx-4 sm:w-[250px]">
                             <div class="flex flex-wrap justify-center items-center">
-                                <img src="img/Logo_Bahasa.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                                <img src="img/Logo_Laravel.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                                <img src="img/Logo_Tailwind.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                                <img src="img/Logo_Javascript.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                                <img src="img/Logo_Mysql.png" alt="Logo" class="w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
+                                <img src="img/Logo_Bahasa.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
+                                <img src="img/Logo_Laravel.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
+                                <img src="img/Logo_Tailwind.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
+                                <img src="img/Logo_Javascript.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
+                                <img src="img/Logo_Mysql.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
                             </div>
                         </div>
                         
                     </div>
                     <div class="w-full self-end lg:w-1/2">
-                         <h3 class="text-2xl font-semibold  mb-1 text-[#3B82F6]">Pengalaman kerja</h3>
+                         <h3 class="text-2xl font-semibold text-[#3B82F6]">Pengalaman kerja</h3>
                          <ul class="list-disc pl-5">
                             <li>
-                                <p>2024</p>
-                                <p>Komdigi Provinsi Sumatera Barat (Kerja Praktek)</p>
+                                <p>2024 (Kerja Praktek)</p>
+                                <p>Komdigi Provinsi Sumatera Barat</p>
                             </li>
                             <li>
-                                <p>2021</p>
-                                <p>Toyota Intercom Padang (IT Support)</p>
+                                <p>2021 (IT Support)</p>
+                                <p>Toyota Intercom Padang</p>
                             </li>
                             <li>
-                                <p>2020</p>
-                                <p>PT. Maju Bersama Telekomunikasi [Indihome] (Magang) </p>
+                                <p>2020 (Magang)</p>
+                                <p>PT. Maju Bersama Telekomunikasi [Indihome] </p>
                             </li>
                          </ul>
                     </div>
@@ -232,7 +237,7 @@
                             <div class="flex-1">
                                 <h3 class="text-lg font-semibold contact-card-title">Email</h3>
                                 <p class="text-[#254ABE] dark:text-sky-300 text-sm font-medium">ahmaderlan014@gmail.com</p>
-                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Respons cepat untuk komunikasi</p>
+                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Waktu respons 24 jam.</p>
                             </div>
                         </div>
                     </div>
@@ -250,7 +255,7 @@
                             <div class="flex-1">
                                 <h3 class="text-lg font-semibold contact-card-title">Instagram</h3>
                                 <p class="text-[#254ABE] dark:text-sky-300 text-sm font-medium">@erlannn.s</p>
-                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Follow untuk konten & tips</p>
+                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Ikuti saya untuk mengenal saya lebih jauh.</p>
                             </div>
                         </div>
                     </div>
@@ -267,8 +272,8 @@
                             </div>
                             <div class="flex-1">
                                 <h3 class="text-lg font-semibold contact-card-title">GitHub</h3>
-                                <p class="text-[#254ABE] dark:text-sky-300 text-sm font-medium">View Profile</p>
-                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Repository & project</p>
+                                <p class="text-[#254ABE] dark:text-sky-300 text-sm font-medium">erlannn</p>
+                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Lihat repository & project yang telah saya kerjakan.</p>
                             </div>
                         </div>
                     </div>
@@ -345,5 +350,9 @@
         </div>
     </footer>
     <!-- Footer End -->
+
+    <script>
+    const { animate } = anime;
+    </script>
 </body>
 </html>
