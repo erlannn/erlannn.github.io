@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const typingElem = document.getElementById('hero-typing');
 		if (!typingElem) return;
 
-		const words = ['Full-Stack Developer', 'IT Support Specialist', 'Teknik Informatika Alumni', 'Web Developer'];
+		const words = ['Full-Stack Developer', 'IT Support Specialist', 'Web Developer'];
 		let wordIdx = 0;
 		let charIdx = 0;
 		let isDeleting = false;
