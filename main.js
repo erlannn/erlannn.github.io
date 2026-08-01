@@ -227,146 +227,327 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 
 	const animateExperienceSection = () => {
-		if (!animeAvailable || prefersReducedMotion.matches) {
-			return;
-		}
-
 		const experienceSection = document.getElementById('pengalaman');
-		if (!experienceSection) {
-			return;
-		}
+		if (!experienceSection) return;
 
 		const marqueeViewport = experienceSection.querySelector('.experience-marquee');
 		const marqueeTrack = experienceSection.querySelector('.experience-track');
-		if (!marqueeViewport || !marqueeTrack) {
-			return;
-		}
+		if (!marqueeViewport || !marqueeTrack) return;
 
-		let marqueeInitialized = false;
-		let trackMotion = null;
-		let hoverReady = false;
+		// Matikan animasi CSS agar JS RequestAnimationFrame mengontrol gerakan secara 100% presisi
+		marqueeTrack.style.animation = 'none';
+		marqueeTrack.style.willChange = 'transform';
 
-		const originalLogos = Array.from(marqueeTrack.querySelectorAll('.experience-logo'));
-		if (originalLogos.length === 0) {
-			return;
-		}
+		let isPaused = false;
+		let currentX = 0;
+		const speed = 1.0; // Kecepatan bergerak dari kiri ke kanan (piksel per frame)
 
-		const prepareMarquee = () => {
-			if (marqueeInitialized) {
-				return true;
-			}
+		let halfWidth = marqueeTrack.scrollWidth / 2;
 
-			const trackWidth = marqueeTrack.scrollWidth / 2;
-			if (!trackWidth) {
-				return false;
-			}
+		const recalculateWidth = () => {
+			halfWidth = marqueeTrack.scrollWidth / 2;
+		};
 
-			const cloneGroup = document.createElement('div');
-			cloneGroup.className = 'experience-group flex flex-nowrap items-center gap-3 sm:gap-4';
-			originalLogos.forEach((logo) => {
-				cloneGroup.appendChild(logo.cloneNode(true));
-			});
-			marqueeTrack.appendChild(cloneGroup);
+		recalculateWidth();
+		window.addEventListener('resize', recalculateWidth);
+		window.setTimeout(recalculateWidth, 500);
 
-			marqueeViewport.style.position = 'relative';
-			marqueeViewport.style.overflow = 'hidden';
-			marqueeTrack.style.width = 'max-content';
-			marqueeTrack.style.flexWrap = 'nowrap';
-			marqueeTrack.style.willChange = 'transform';
+		currentX = -halfWidth;
 
-			const startTrackMotion = () => {
-				trackMotion = animate(marqueeTrack, {
-					x: -trackWidth,
-					duration: 16000,
-					ease: 'linear',
-					onComplete: () => {
-						marqueeTrack.style.transform = 'translateX(0px)';
-						if (!prefersReducedMotion.matches) {
-							startTrackMotion();
-						}
-					},
-				});
-
-				if (trackMotion && typeof trackMotion.play === 'function') {
-					trackMotion.play();
+		const animateMarqueeFrame = () => {
+			if (!isPaused && halfWidth > 0) {
+				currentX += speed;
+				if (currentX >= 0) {
+					currentX = -halfWidth;
 				}
-
-				return trackMotion;
-			};
-
-			startTrackMotion();
-			marqueeInitialized = true;
-			hoverReady = true;
-			return true;
+				marqueeTrack.style.transform = `translate3d(${currentX}px, 0, 0)`;
+			}
+			requestAnimationFrame(animateMarqueeFrame);
 		};
 
-		const setLogoHoverState = (logo, isHovering) => {
-			if (!hoverReady) {
-				return;
+		requestAnimationFrame(animateMarqueeFrame);
+
+		// Event handlers pause & resume saat kursor mouse di atas logo/marquee
+		const pauseMarquee = () => {
+			isPaused = true;
+		};
+
+		const resumeMarquee = () => {
+			isPaused = false;
+		};
+
+		marqueeViewport.addEventListener('mouseenter', pauseMarquee);
+		marqueeViewport.addEventListener('mouseleave', resumeMarquee);
+		marqueeViewport.addEventListener('mouseover', pauseMarquee);
+		marqueeViewport.addEventListener('pointerover', pauseMarquee);
+
+		marqueeViewport.addEventListener('mouseout', (e) => {
+			if (!marqueeViewport.contains(e.relatedTarget)) {
+				resumeMarquee();
+			}
+		});
+
+		marqueeViewport.addEventListener('pointerout', (e) => {
+			if (!marqueeViewport.contains(e.relatedTarget)) {
+				resumeMarquee();
+			}
+		});
+
+		const items = marqueeTrack.querySelectorAll('.experience-item');
+		items.forEach((item) => {
+			item.addEventListener('mouseenter', pauseMarquee);
+			item.addEventListener('mouseleave', resumeMarquee);
+			item.addEventListener('mouseover', pauseMarquee);
+			item.addEventListener('pointerover', pauseMarquee);
+			item.addEventListener('focusin', pauseMarquee);
+			item.addEventListener('focusout', resumeMarquee);
+			item.addEventListener('touchstart', pauseMarquee, { passive: true });
+			item.addEventListener('touchend', resumeMarquee, { passive: true });
+		});
+	};
+
+	const initHeroTyping = () => {
+		const typingElem = document.getElementById('hero-typing');
+		if (!typingElem) return;
+
+		const words = ['Full-Stack Developer', 'IT Support Specialist', 'Teknik Informatika Alumni', 'Web Developer'];
+		let wordIdx = 0;
+		let charIdx = 0;
+		let isDeleting = false;
+		let typingSpeed = 100;
+
+		const type = () => {
+			const currentWord = words[wordIdx];
+			if (isDeleting) {
+				typingElem.textContent = currentWord.substring(0, charIdx - 1);
+				charIdx--;
+				typingSpeed = 40;
+			} else {
+				typingElem.textContent = currentWord.substring(0, charIdx + 1);
+				charIdx++;
+				typingSpeed = 90;
 			}
 
-			if (isHovering) {
-				if (trackMotion && typeof trackMotion.pause === 'function') {
-					trackMotion.pause();
-				}
-				logo.style.zIndex = '20';
-				playMotion(logo, {
-					scale: 1.18,
-					rotate: 0,
-					duration: 280,
-					ease: 'out(2)',
+			if (!isDeleting && charIdx === currentWord.length) {
+				typingSpeed = 2200;
+				isDeleting = true;
+			} else if (isDeleting && charIdx === 0) {
+				isDeleting = false;
+				wordIdx = (wordIdx + 1) % words.length;
+				typingSpeed = 400;
+			}
+
+			setTimeout(type, typingSpeed);
+		};
+
+		type();
+	};
+
+	const initStatsCounter = () => {
+		const counters = document.querySelectorAll('.counter');
+		if (counters.length === 0) return;
+
+		let animated = false;
+
+		const startCounters = () => {
+			if (animated) return;
+			animated = true;
+
+			counters.forEach((counter) => {
+				const target = +counter.getAttribute('data-target') || 0;
+				const duration = 1600;
+				const startTime = performance.now();
+
+				const updateCount = (currentTime) => {
+					const elapsed = currentTime - startTime;
+					const progress = Math.min(elapsed / duration, 1);
+					const currentVal = Math.floor(progress * target);
+
+					counter.textContent = currentVal;
+
+					if (progress < 1) {
+						requestAnimationFrame(updateCount);
+					} else {
+						counter.textContent = target;
+					}
+				};
+
+				requestAnimationFrame(updateCount);
+			});
+		};
+
+		const statSection = document.getElementById('statistik');
+		if (statSection && 'IntersectionObserver' in window) {
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						startCounters();
+						observer.unobserve(entry.target);
+					}
 				});
-				return;
-			}
+			}, { threshold: 0.3 });
+			observer.observe(statSection);
+		} else {
+			startCounters();
+		}
+	};
 
-			playMotion(logo, {
-				scale: 1,
-				rotate: 0,
-				duration: 260,
-				ease: 'out(2)',
+	const initProjectFilters = () => {
+		const filterBtns = document.querySelectorAll('.project-filter-btn');
+		const projectCards = document.querySelectorAll('.project-card');
+
+		if (filterBtns.length === 0 || projectCards.length === 0) return;
+
+		filterBtns.forEach((btn) => {
+			btn.addEventListener('click', () => {
+				filterBtns.forEach((b) => b.classList.remove('active'));
+				btn.classList.add('active');
+
+				const filterValue = btn.getAttribute('data-filter');
+
+				projectCards.forEach((card) => {
+					const categories = card.getAttribute('data-category') || '';
+					if (filterValue === 'all' || categories.includes(filterValue)) {
+						card.classList.remove('is-hidden');
+						card.style.opacity = '0';
+						card.style.transform = 'scale(0.95)';
+						setTimeout(() => {
+							card.style.opacity = '1';
+							card.style.transform = 'scale(1)';
+						}, 50);
+					} else {
+						card.classList.add('is-hidden');
+					}
+				});
 			});
-			logo.style.zIndex = '';
+		});
+	};
 
-			if (trackMotion && typeof trackMotion.play === 'function') {
-				trackMotion.play();
+	const initModalLightbox = () => {
+		const modal = document.getElementById('project-modal');
+		if (!modal) return;
+
+		const modalImg = document.getElementById('modal-img');
+		const modalTitle = document.getElementById('modal-title');
+		const modalDesc = document.getElementById('modal-desc');
+		const modalTags = document.getElementById('modal-tags');
+		const modalClose = document.getElementById('modal-close');
+		const modalCloseBtn = document.getElementById('modal-close-btn');
+
+		const openModal = (imgSrc, title, desc, tagsStr) => {
+			if (modalImg) modalImg.src = imgSrc;
+			if (modalTitle) modalTitle.textContent = title;
+			if (modalDesc) modalDesc.textContent = desc;
+
+			if (modalTags && tagsStr) {
+				modalTags.innerHTML = '';
+				tagsStr.split(',').forEach((tag) => {
+					const span = document.createElement('span');
+					span.className = 'px-3 py-1 text-xs font-bold rounded-lg bg-blue-100 dark:bg-sky-900/60 text-[#254ABE] dark:text-sky-300';
+					span.textContent = tag.trim();
+					modalTags.appendChild(span);
+				});
 			}
+
+			modal.classList.add('is-open');
+			document.body.style.overflow = 'hidden';
 		};
 
-		const attachHoverHandlers = () => {
-			marqueeTrack.querySelectorAll('.experience-logo').forEach((logo) => {
-				logo.addEventListener('mouseenter', () => setLogoHoverState(logo, true));
-				logo.addEventListener('mouseleave', () => setLogoHoverState(logo, false));
+		const closeModal = () => {
+			modal.classList.remove('is-open');
+			document.body.style.overflow = '';
+		};
+
+		document.querySelectorAll('.modal-trigger').forEach((trigger) => {
+			trigger.addEventListener('click', () => {
+				const imgSrc = trigger.getAttribute('data-img');
+				const title = trigger.getAttribute('data-title');
+				const desc = trigger.getAttribute('data-desc');
+				const tags = trigger.getAttribute('data-tags');
+				openModal(imgSrc, title, desc, tags);
 			});
-		};
+		});
 
-		const tryStartExperienceMarquee = () => {
-			if (marqueeInitialized) {
-				return;
+		if (modalClose) modalClose.addEventListener('click', closeModal);
+		if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+
+		modal.addEventListener('click', (e) => {
+			if (e.target === modal) closeModal();
+		});
+
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+				closeModal();
 			}
+		});
+	};
 
-			const sectionRect = experienceSection.getBoundingClientRect();
-			const triggerPoint = window.innerHeight * 0.9;
+	const initToastNotif = () => {
+		const toast = document.getElementById('toast-notif');
+		const toastMsg = document.getElementById('toast-msg');
+		const toastIcon = document.getElementById('toast-icon');
+		let toastTimer = null;
 
-			if (sectionRect.top <= triggerPoint && sectionRect.bottom >= 0 && prepareMarquee()) {
-				attachHoverHandlers();
-				window.removeEventListener('scroll', onExperienceScroll);
-				window.removeEventListener('resize', onExperienceScroll);
+		window.showToast = (msg, icon = '✨') => {
+			if (!toast) return;
+			if (toastMsg) toastMsg.textContent = msg;
+			if (toastIcon) toastIcon.textContent = icon;
+
+			toast.classList.add('is-show');
+			clearTimeout(toastTimer);
+			toastTimer = setTimeout(() => {
+				toast.classList.remove('is-show');
+			}, 3000);
+		};
+
+		document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+			link.addEventListener('click', () => {
+				window.showToast('Membuka kontak email...', '📧');
+			});
+		});
+	};
+
+	const initBackToTop = () => {
+		const btn = document.getElementById('back-to-top');
+		if (!btn) return;
+
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 350) {
+				btn.classList.add('is-visible');
+			} else {
+				btn.classList.remove('is-visible');
 			}
-		};
+		}, { passive: true });
 
-		const onExperienceScroll = () => {
-			window.requestAnimationFrame(tryStartExperienceMarquee);
-		};
+		btn.addEventListener('click', () => {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	};
 
-		window.addEventListener('scroll', onExperienceScroll, { passive: true });
-		window.addEventListener('resize', onExperienceScroll);
-		tryStartExperienceMarquee();
-		window.setTimeout(tryStartExperienceMarquee, 700);
+	const initCursorSpotlight = () => {
+		const spotlight = document.getElementById('cursor-spotlight');
+		if (!spotlight || window.innerWidth < 768) return;
+
+		document.addEventListener('mousemove', (e) => {
+			spotlight.style.opacity = '1';
+			spotlight.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(37, 74, 190, 0.08), transparent 80%)`;
+		});
+
+		document.addEventListener('mouseleave', () => {
+			spotlight.style.opacity = '0';
+		});
 	};
 
 	animateHeroSection();
 	animateAboutSection();
 	animateExperienceSection();
+	initHeroTyping();
+	initStatsCounter();
+	initProjectFilters();
+	initModalLightbox();
+	initToastNotif();
+	initBackToTop();
+	initCursorSpotlight();
 
 	if (!menuButton || !mobileMenu) {
 		return;

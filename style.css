@@ -302,3 +302,139 @@ body {
         .footer-link:hover {
             transform: translateX(2px);
         }
+
+
+        .disabled-link {
+            pointer-events: none;
+            cursor: not-allowed;
+            color: gray;
+            text-decoration: none;
+        }
+
+        /* ========================================================
+           EXPERIENCE MARQUEE (KIRI KE KANAN & HOVER PAUSE/ZOOM)
+           ======================================================== */
+        @keyframes marquee-left-to-right {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .experience-marquee {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+        }
+
+        .experience-track {
+            display: flex;
+            width: max-content;
+            animation-name: marquee-left-to-right;
+            animation-duration: 18s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            will-change: transform;
+        }
+
+        /* Saat kursor diarahkan ke area marquee / foto, animasi berhenti total */
+        .experience-marquee:hover .experience-track,
+        .experience-track:hover,
+        .experience-track.is-paused {
+            animation-play-state: paused !important;
+        }
+
+        .experience-item {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+            z-index: 1;
+        }
+
+        /* Foto me-zoom saat kursor di atas salah satu foto */
+        .experience-item:hover {
+            transform: scale(1.25) translateY(-6px) !important;
+            z-index: 50 !important;
+            box-shadow: 0 20px 30px -10px rgba(37, 74, 190, 0.3) !important;
+        }
+
+        .experience-item:hover .experience-logo {
+            filter: grayscale(0%) opacity(1) !important;
+            transform: scale(1.1) !important;
+        }
+
+        /* ========================================================
+           INTERACTIVE COMPONENT STYLES
+           ======================================================== */
+        /* Modal Lightbox */
+        #project-modal.is-open {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
+
+        #project-modal.is-open > div {
+            transform: scale(1) !important;
+        }
+
+        /* Project Cards & Filters */
+        .project-card {
+            transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+
+        .project-card.is-hidden {
+            display: none !important;
+        }
+
+        .project-filter-btn.active {
+            background-color: #254ABE !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 14px rgba(37, 74, 190, 0.35);
+        }
+
+        body.dark-mode .project-filter-btn.active {
+            background-color: #38bdf8 !important;
+            color: #0f172a !important;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+        }
+
+        /* Back to Top */
+        #back-to-top.is-visible {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
+
+        /* Toast Notification */
+        #toast-notif.is-show {
+            opacity: 1 !important;
+            transform: translate(-50%, -8px) !important;
+            pointer-events: auto !important;
+        }
+
+        /* Hero Typing Cursor */
+        #hero-typing::after {
+            content: '|';
+            animation: blink 0.7s infinite alternate;
+            margin-left: 2px;
+            color: #254ABE;
+        }
+
+        body.dark-mode #hero-typing::after {
+            color: #38bdf8;
+        }
+
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        /* Stats Cards Dark Mode */
+        body.dark-mode .stat-card {
+            background-color: rgba(15, 23, 42, 0.7) !important;
+            border-color: rgba(56, 189, 248, 0.2) !important;
+        }
+

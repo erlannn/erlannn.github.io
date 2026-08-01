@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,10 @@
     <!-- SEO -->
 
     <meta name="title" content="Ahmad Erlan Saputra">
-    <meta name="description" content="Portofolio Ahmad Erlan Saputra - IT, Web Development, Alumni Institut Teknologi Padang">
-    <meta name="keywords" content="Ahmad Erlan Saputra, Portofolio, IT, Web Development, IT Support, Institut Teknologi Padang, Teknik Informatika">
+    <meta name="description"
+        content="Portofolio Ahmad Erlan Saputra - IT, Web Development, Alumni Institut Teknologi Padang">
+    <meta name="keywords"
+        content="Ahmad Erlan Saputra, Portofolio, IT, Web Development, IT Support, Institut Teknologi Padang, Teknik Informatika">
     <meta name="author" content="Ahmad Erlan Saputra">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -22,15 +25,18 @@
     <link rel="icon" type="image/jpeg" sizes="16x16" href="img/Logo.jpeg">
 
     <!-- Font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <!-- Font End -->
 
     <title>Portofolio | Ahmad Erlan Saputra</title>
-    
+
 </head>
-<body >
+
+<body>
 
     <!-- Night Mode menggunakan bg-gray-900 -->
     <!-- Secondary #3B82F6 -->
@@ -42,8 +48,10 @@
             <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
                 <a href="#beranda" class="text-lg font-bold text-[#254ABE]">Erlan</a>
                 <div class="flex items-center gap-2">
-                    <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Aktifkan dark mode" title="Aktifkan dark mode">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="theme-toggle__icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Aktifkan dark mode"
+                        title="Aktifkan dark mode">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="theme-toggle__icon icon-sun" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="4"></circle>
                             <path d="M12 2v2"></path>
                             <path d="M12 20v2"></path>
@@ -54,13 +62,17 @@
                             <path d="m6.34 17.66-1.41 1.41"></path>
                             <path d="m19.07 4.93-1.41 1.41"></path>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="theme-toggle__icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="theme-toggle__icon icon-moon" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 3a7 7 0 1 0 9 9 9 9 0 1 1-9-9z"></path>
                         </svg>
                         <span class="sr-only">Ubah tema</span>
                     </button>
-                    <button id="mobile-menu-button" type="button" class="inline-flex items-center rounded-md p-2 text-[#254ABE] hover:bg-[#254ABE]/10 lg:hidden" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <button id="mobile-menu-button" type="button"
+                        class="inline-flex items-center rounded-md p-2 text-[#254ABE] hover:bg-[#254ABE]/10 lg:hidden"
+                        aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
@@ -73,12 +85,16 @@
                     <li><a href="#kontak" class="hover:text-blue-700">Kontak</a></li>
                 </ul>
             </div>
-            <div id="mobile-menu" class="max-h-0 overflow-hidden border-t border-[#254ABE]/15 px-4 py-0 opacity-0 pointer-events-none transition-all duration-300 lg:hidden">
+            <div id="mobile-menu"
+                class="max-h-0 overflow-hidden border-t border-[#254ABE]/15 px-4 py-0 opacity-0 pointer-events-none transition-all duration-300 lg:hidden">
                 <ul class="space-y-3 font-semibold text-[#254ABE]">
                     <li><a href="#beranda" class="block rounded-md px-2 py-2 hover:bg-[#254ABE]/10">Beranda</a></li>
-                    <li><a href="#tentangsaya" class="block rounded-md px-2 py-2 hover:bg-[#254ABE]/10">Tentang Saya</a></li>
-                    <li><a href="#pengalaman" class="block rounded-md px-2 py-2 hover:bg-[#254ABE]/10">Pengalaman</a></li>
-                    <li><a href="#portofolio" class="block rounded-md px-2 py-2 hover:bg-[#254ABE]/10">Portofolio</a></li>
+                    <li><a href="#tentangsaya" class="block rounded-md px-2 py-2 hover:bg-[#254ABE]/10">Tentang Saya</a>
+                    </li>
+                    <li><a href="#pengalaman" class="block rounded-md px-2 py-2 hover:bg-[#254ABE]/10">Pengalaman</a>
+                    </li>
+                    <li><a href="#portofolio" class="block rounded-md px-2 py-2 hover:bg-[#254ABE]/10">Portofolio</a>
+                    </li>
                     <li><a href="#kontak" class="block rounded-md px-2 py-2 hover:bg-[#254ABE]/10">Kontak</a></li>
                 </ul>
             </div>
@@ -90,24 +106,38 @@
     <section id="beranda" class="py-8 md:py-12">
         <div class="mx-auto flex max-w-6xl flex-wrap p-4">
             <div class="w-full self-center px-2 sm:px-4 lg:w-1/2">
-                <h1 class="hero-animate text-2xl font-semibold text-[#254ABE] sm:text-3xl">Hi! Selamat datang di portofolio saya</h1>
+                <h1 class="hero-animate text-2xl font-semibold text-[#254ABE] sm:text-3xl">Hi! Selamat datang di
+                    portofolio saya</h1>
                 <h2 class="hero-animate mb-1 text-4xl font-bold sm:text-5xl">Ahmad Erlan Saputra</h2>
-                <h2 class="hero-animate mb-4 text-xl font-semibold sm:text-2xl">Alumni <a href="https://www.itp.ac.id/" class="text-[#254ABE] hover:text-blue-800 underline" target="_blank">Institut Teknologi Padang</a></h2>
-                <p class="hero-animate text-sm text-gray-500 font-semibold text-justify sm:text-base">Pada halaman portofolio saya anda dapat menemukan informasi tentang saya, pengalaman, dan cara menghubungi saya.</p>
+                <h2 class="hero-animate mb-3 text-lg font-semibold sm:text-xl text-gray-700 dark:text-gray-300 min-h-[32px] flex items-center gap-2">
+                    <span>Bidang & Keahlian:</span>
+                    <span id="hero-typing" class="text-[#254ABE] dark:text-sky-400 font-bold border-b-2 border-[#254ABE] dark:border-sky-400 pb-0.5"></span>
+                </h2>
+                <h2 class="hero-animate mb-4 text-xl font-semibold sm:text-2xl">Alumni <a href="https://www.itp.ac.id/"
+                        class="text-[#254ABE] hover:text-blue-800 underline" target="_blank">Institut Teknologi
+                        Padang</a></h2>
+                <p class="hero-animate text-sm text-gray-500 font-semibold text-justify sm:text-base">Pada halaman
+                    portofolio saya anda dapat menemukan informasi tentang saya, pengalaman, dan cara menghubungi saya.
+                </p>
 
                 <a href="#kontak" class="inline-block mt-4">
-                    <button type="button" class="hero-cta bg-[#254ABE] hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
+                    <button type="button"
+                        class="hero-cta bg-[#254ABE] hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
                         Hubungi Saya
                     </button>
                 </a>
             </div>
             <div class="w-full self-end px-2 sm:px-4 lg:w-1/2">
                 <div class="relative mt-10 lg:mt-0 lg:right-0">
-                    <img src="img/Erlan.png" alt="Foto Profil" class="hero-portrait mx-auto w-72 rounded-full object-cover sm:w-96" fetchpriority="high" decoding="async">
+                    <img src="img/Erlan.png" alt="Foto Profil"
+                        class="hero-portrait mx-auto w-72 rounded-full object-cover sm:w-96" fetchpriority="high"
+                        decoding="async">
 
                     <span class="hero-shape absolute -bottom-0 -z-10 left-1/2 top-0 -translate-x-1/2">
                         <svg width="500" height="350" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="#2596be" d="M54.5,-21.2C60.5,0.8,48.2,25.2,27.9,40.4C7.6,55.7,-20.9,61.8,-37.5,50.1C-54.1,38.4,-58.8,8.9,-50.6,-16.1C-42.4,-41.1,-21.2,-61.6,1.5,-62.1C24.2,-62.6,48.5,-43.1,54.5,-21.2Z" transform="translate(100 100) scale(1.2)"></path>
+                            <path fill="#2596be"
+                                d="M54.5,-21.2C60.5,0.8,48.2,25.2,27.9,40.4C7.6,55.7,-20.9,61.8,-37.5,50.1C-54.1,38.4,-58.8,8.9,-50.6,-16.1C-42.4,-41.1,-21.2,-61.6,1.5,-62.1C24.2,-62.6,48.5,-43.1,54.5,-21.2Z"
+                                transform="translate(100 100) scale(1.2)"></path>
                         </svg>
                     </span>
                 </div>
@@ -117,14 +147,16 @@
     <!-- Beranda End -->
 
     <!-- SEO -->
-     <!-- <a href="https://www.seobility.net/en/seocheck/check?url=https%3A%2F%2Ferlannn.github.io%2F"><img src="https://app.seobility.net/widget/widget.png?url=https%3A%2F%2Ferlannn.github.io%2F" alt="Seobility Score for erlannn.github.io"></a> -->
+    <!-- <a href="https://www.seobility.net/en/seocheck/check?url=https%3A%2F%2Ferlannn.github.io%2F"><img src="https://app.seobility.net/widget/widget.png?url=https%3A%2F%2Ferlannn.github.io%2F" alt="Seobility Score for erlannn.github.io"></a> -->
     <!-- SEO END -->
-     
+
     <!-- Tentang Saya -->
     <section id="tentangsaya" class="py-10 md:py-14">
         <div class="mx-auto flex max-w-6xl flex-wrap px-4">
             <div class="w-full self-center px-2 sm:px-4 lg:w-1/2 ">
-                <img src="img/L.png" alt="Erlan" class="about-visual my-5 mx-auto w-2/3 rounded-full object-cover sm:w-1/2" loading="lazy" decoding="async">
+                <img src="img/L.png" alt="Erlan"
+                    class="about-visual my-5 mx-auto w-2/3 rounded-full object-cover sm:w-1/2" loading="lazy"
+                    decoding="async">
                 <!-- <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam in, vero id iste doloremque laboriosam saepe ea odio ex earum ad voluptatum qui impedit magni? Incidunt consectetur quod optio delectus!
                     Praesentium sequi natus sapiente velit ad officiis, accusamus nesciunt fuga quisquam. Doloribus asperiores tempore eum molestias libero? Molestias excepturi id unde ipsum maiores, saepe mollitia natus, dolorem doloribus magnam in.</p>
@@ -132,28 +164,47 @@
             </div>
             <div class="w-full self-end px-2 py-5 sm:px-4 lg:w-1/2 ">
                 <h3 class="about-animate text-2xl font-semibold mb-1 text-[#254ABE]">Tentang saya</h3>
-                <p class="about-animate text-justify tracking-tighter">Saya adalah Seorang <span class="font-bold">IT</span>, memiliki pengalaman bekerja dengan perusahaan dan Alumni <span class="font-bold"><a href="https://www.itp.ac.id/" target="_blank" class=" hover:underline">Institut Teknologi Padang</a></span> dengan jurusan <span class="font-bold"><a href="https://itp.ac.id/teknik-informatika-s1" target="_blank" class=" hover:underline">Teknik Informatika</a></span> dengan pengalaman dalam pengembangan perangkat lunak khususnya dalam bidang web development dan pemecahan masalah teknis. Saya memiliki kemampuan IT Support dan troubleshooting perangkat keras dan lunak, serta kemampuan dalam pengembangan perangkat lunak sebagai full-stack developer. Teknologi yang saya kuasai meliputi HTML, CSS, JavaScript, PHP, MySQL, serta framework yaitu Laravel dan CodeIgniter.</p>
+                <p class="about-animate text-justify tracking-tighter">Saya adalah Seorang <span
+                        class="font-bold">IT</span>, memiliki pengalaman bekerja dengan perusahaan dan Alumni <span
+                        class="font-bold"><a href="https://www.itp.ac.id/" target="_blank"
+                            class=" hover:underline">Institut Teknologi Padang</a></span> dengan jurusan <span
+                        class="font-bold"><a href="https://itp.ac.id/teknik-informatika-s1" target="_blank"
+                            class=" hover:underline">Teknik Informatika</a></span> dengan pengalaman dalam pengembangan
+                    perangkat lunak khususnya dalam bidang web development dan pemecahan masalah teknis. Saya memiliki
+                    kemampuan IT Support dan troubleshooting perangkat keras dan lunak, serta kemampuan dalam
+                    pengembangan perangkat lunak sebagai full-stack developer. Teknologi yang saya kuasai meliputi HTML,
+                    CSS, JavaScript, PHP, MySQL, serta framework yaitu Laravel dan CodeIgniter.</p>
                 <div class="flex flex-wrap gap-y-8 py-5">
                     <div class="w-full self-center lg:w-1/2">
-                         <h3 class="text-2xl font-semibold text-[#3B82F6]">Pendidikan</h3>
-                         <p>2021 - 2026</p>
-                         <p class="mb-10">Institut Teknologi Padang</p>
+                        <h3 class="text-2xl font-semibold text-[#3B82F6]">Pendidikan</h3>
+                        <p>2021 - 2026</p>
+                        <p class="mb-10">Institut Teknologi Padang</p>
 
-                         <h3 class="text-2xl font-semibold  text-[#3B82F6]">Kemampuan</h3>
+                        <h3 class="text-2xl font-semibold  text-[#3B82F6]">Kemampuan</h3>
                         <div class="mx-auto w-full max-w-[250px] sm:mx-4 sm:w-[250px]">
                             <div class="flex flex-wrap justify-center items-center">
-                                <img src="img/Logo_Bahasa.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                                <img src="img/Logo_Laravel.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                                <img src="img/Logo_Tailwind.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                                <img src="img/Logo_Javascript.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                                <img src="img/Logo_Mysql.png" alt="Logo" class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
+                                <img src="img/Logo_Bahasa.png" alt="Logo"
+                                    class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300"
+                                    loading="lazy" decoding="async">
+                                <img src="img/Logo_Laravel.png" alt="Logo"
+                                    class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300"
+                                    loading="lazy" decoding="async">
+                                <img src="img/Logo_Tailwind.png" alt="Logo"
+                                    class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300"
+                                    loading="lazy" decoding="async">
+                                <img src="img/Logo_Javascript.png" alt="Logo"
+                                    class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300"
+                                    loading="lazy" decoding="async">
+                                <img src="img/Logo_Mysql.png" alt="Logo"
+                                    class="skill-logo w-[50px] p-1 opacity-100 grayscale hover:grayscale-0 duration-300"
+                                    loading="lazy" decoding="async">
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="w-full self-end lg:w-1/2">
-                         <h3 class="text-2xl font-semibold text-[#3B82F6]">Pengalaman kerja</h3>
-                         <ul class="list-disc pl-5">
+                        <h3 class="text-2xl font-semibold text-[#3B82F6]">Pengalaman kerja</h3>
+                        <ul class="list-disc pl-5">
                             <li>
                                 <p>2024 (Kerja Praktek)</p>
                                 <p>Komdigi Provinsi Sumatera Barat</p>
@@ -166,58 +217,190 @@
                                 <p>2020 (Magang)</p>
                                 <p>PT. Maju Bersama Telekomunikasi [Indihome] </p>
                             </li>
-                         </ul>
+                        </ul>
                     </div>
                 </div>
                 <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, molestias. Laborum tenetur praesentium perspiciatis, iure fuga animi facilis beatae provident qui cumque, nemo, fugit iste ullam at architecto officia quis.</p> -->
             </div>
         </div>
-     </section>
+    </section>
     <!-- Tentang saya End -->
 
+    <!-- Statistik Counter -->
+    <section id="statistik" class="py-10 bg-white/70 dark:bg-slate-900/70 border-y border-blue-500/10 shadow-sm backdrop-blur-md">
+        <div class="mx-auto max-w-6xl px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="stat-card p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#254ABE] dark:text-sky-400 font-mono mb-1"><span class="counter" data-target="4">0</span>+</div>
+                <div class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-300">Project Selesai</div>
+            </div>
+            <div class="stat-card p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#254ABE] dark:text-sky-400 font-mono mb-1"><span class="counter" data-target="3">0</span>+</div>
+                <div class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-300">Pengalaman Kerja/Magang</div>
+            </div>
+            <div class="stat-card p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#254ABE] dark:text-sky-400 font-mono mb-1"><span class="counter" data-target="6">0</span>+</div>
+                <div class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-300">Tech Stack Utama</div>
+            </div>
+            <div class="stat-card p-5 rounded-2xl bg-slate-50/80 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                <div class="text-3xl sm:text-4xl font-extrabold text-[#254ABE] dark:text-sky-400 font-mono mb-1"><span class="counter" data-target="100">0</span>%</div>
+                <div class="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-300">Komitmen & Troubleshooting</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pengalaman -->
-        <section id="pengalaman" class="py-12 mb-20 bg-[#2596be]/20 md:py-16 md:mb-30">
-            <h2 class="text-2xl font-bold text-[#254ABE] px-7 mb-1 text-center">Pengalaman</h2>
-            <div class="mx-auto flex max-w-6xl items-center text-center px-4">
-                <div class="w-full self-center px-4">
-                    <h3 class="text-3xl font-semibold text-[#2596be] sm:text-4xl lg:text-5xl">Pengalaman Kerja dan Magang</h3>
-                    <p class="mt-5 text-base font-semibold text-gray-500 sm:text-lg">Pernah bekerja dan magang dengan perusahaan berikut.</p>
-                    <div class="experience-marquee mt-10 overflow-hidden">
-                        <div class="experience-track flex flex-nowrap items-center gap-3 sm:gap-4">
-                        <a href="https://www.toyotaintercom.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="img/Logo_Intercom.png" alt="Logo Intercom" class="experience-logo w-[250px] p-5 opacity-90 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                        </a>
-                        <a href="https://diskominfotik.sumbarprov.go.id/" target="_blank" rel="noopener noreferrer">
-                            <img src="img/logo_Komdigi.png" alt="Logo Komdigi" class="experience-logo w-[150px] p-5 opacity-90 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                        </a>
-                        <a href="https://www.telkomsel.com/indihome" target="_blank" rel="noopener noreferrer">
-                            <img src="img/Logo_IndiHome.png" alt="Logo IndiHome" class="experience-logo w-[200px] p-5 opacity-90 grayscale hover:grayscale-0 duration-300" loading="lazy" decoding="async">
-                        </a>
+    <section id="pengalaman" class="py-12 mb-20 bg-[#2596be]/20 md:py-16 md:mb-30 overflow-hidden">
+        <h2 class="text-2xl font-bold text-[#254ABE] px-7 mb-1 text-center">Pengalaman</h2>
+        <div class="mx-auto flex max-w-6xl items-center text-center px-4">
+            <div class="w-full self-center px-4">
+                <h3 class="text-3xl font-semibold text-[#2596be] sm:text-4xl lg:text-5xl">Pengalaman Kerja dan Magang</h3>
+                <p class="mt-4 text-base font-semibold text-gray-500 sm:text-lg">Arahkan kursor ke foto untuk memberhentikan animasi & melihat detail logo.</p>
+                
+                <!-- Infinite Marquee Track Left-to-Right -->
+                <div class="experience-marquee mt-10 overflow-hidden relative py-6">
+                    <div class="experience-track flex flex-nowrap items-center gap-6 sm:gap-10 w-max">
+                        <!-- Group 1 -->
+                        <div class="experience-group flex flex-nowrap items-center gap-6 sm:gap-10">
+                            <a href="https://www.toyotaintercom.com/" target="_blank" rel="noopener noreferrer" class="experience-item relative block rounded-2xl p-4 transition-all duration-300 hover:bg-white/80 dark:hover:bg-slate-800/80 hover:shadow-xl hover:-translate-y-1 group">
+                                <img src="img/Logo_Intercom.png" alt="Logo Toyota Intercom"
+                                    class="experience-logo w-[200px] sm:w-[240px] h-20 sm:h-24 object-contain opacity-85 grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-110"
+                                    loading="lazy" decoding="async">
+                            </a>
+                            <a href="https://diskominfotik.sumbarprov.go.id/" target="_blank" rel="noopener noreferrer" class="experience-item relative block rounded-2xl p-4 transition-all duration-300 hover:bg-white/80 dark:hover:bg-slate-800/80 hover:shadow-xl hover:-translate-y-1 group">
+                                <img src="img/logo_Komdigi.png" alt="Logo Komdigi"
+                                    class="experience-logo w-[130px] sm:w-[160px] h-20 sm:h-24 object-contain opacity-85 grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-110"
+                                    loading="lazy" decoding="async">
+                            </a>
+                            <a href="https://www.telkomsel.com/indihome" target="_blank" rel="noopener noreferrer" class="experience-item relative block rounded-2xl p-4 transition-all duration-300 hover:bg-white/80 dark:hover:bg-slate-800/80 hover:shadow-xl hover:-translate-y-1 group">
+                                <img src="img/Logo_IndiHome.png" alt="Logo IndiHome"
+                                    class="experience-logo w-[180px] sm:w-[210px] h-20 sm:h-24 object-contain opacity-85 grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-110"
+                                    loading="lazy" decoding="async">
+                            </a>
+                        </div>
+                        <!-- Group 2 -->
+                        <div class="experience-group flex flex-nowrap items-center gap-6 sm:gap-10">
+                            <a href="https://www.toyotaintercom.com/" target="_blank" rel="noopener noreferrer" class="experience-item relative block rounded-2xl p-4 transition-all duration-300 hover:bg-white/80 dark:hover:bg-slate-800/80 hover:shadow-xl hover:-translate-y-1 group">
+                                <img src="img/Logo_Intercom.png" alt="Logo Toyota Intercom"
+                                    class="experience-logo w-[200px] sm:w-[240px] h-20 sm:h-24 object-contain opacity-85 grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-110"
+                                    loading="lazy" decoding="async">
+                            </a>
+                            <a href="https://diskominfotik.sumbarprov.go.id/" target="_blank" rel="noopener noreferrer" class="experience-item relative block rounded-2xl p-4 transition-all duration-300 hover:bg-white/80 dark:hover:bg-slate-800/80 hover:shadow-xl hover:-translate-y-1 group">
+                                <img src="img/logo_Komdigi.png" alt="Logo Komdigi"
+                                    class="experience-logo w-[130px] sm:w-[160px] h-20 sm:h-24 object-contain opacity-85 grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-110"
+                                    loading="lazy" decoding="async">
+                            </a>
+                            <a href="https://www.telkomsel.com/indihome" target="_blank" rel="noopener noreferrer" class="experience-item relative block rounded-2xl p-4 transition-all duration-300 hover:bg-white/80 dark:hover:bg-slate-800/80 hover:shadow-xl hover:-translate-y-1 group">
+                                <img src="img/Logo_IndiHome.png" alt="Logo IndiHome"
+                                    class="experience-logo w-[180px] sm:w-[210px] h-20 sm:h-24 object-contain opacity-85 grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-110"
+                                    loading="lazy" decoding="async">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <!-- Pengalaman End -->
 
     <!-- Portofolio -->
-     <section id="portofolio" class="py-12 mb-20 md:py-16">
+    <section id="portofolio" class="py-12 mb-20 md:py-16">
         <h2 class="text-2xl text-center font-bold text-[#254ABE] px-7 mb-2">Portofolio</h2>
-        <h3 class="text-3xl text-center font-semibold text-[#2596be] sm:text-4xl lg:text-5xl">Project</h3>
-        <p class="mt-2 text-center text-base font-semibold text-gray-500 sm:text-lg">Beberapa project yang telah saya kembangkan.</p>
-        <div class="max-w-6xl mx-auto px-4 mt-10 sm:mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <article class="h-full rounded-xl bg-white/80 p-5 shadow-lg border-2 border-[#3B82F6]">
-                <img src="img/Project_MenaraSumbar.png" alt="Project Menara Sumbar" class="h-56 w-full rounded-lg object-cover sm:h-64" loading="lazy" decoding="async">
-                <h3 class="mt-4 mb-2 text-xl font-semibold sm:text-2xl">Website Menara Sumbar</h3>
-                <p class="text-justify text-gray-700 tracking-tighter">Website ini dibangun untuk tujuan menyediakan informasi tentang Base Transceiver Station (BTS) kepada pengunjung, pada website ini mempunyai peta yang menampilkan lokasi BTS lengkap dengan jangkauan jaringan dan sudah memiliki fitur geotagging untuk mengetahui apakah pengguna berada dalam jangkauan jaringan.</p>
+        <h3 class="text-3xl text-center font-semibold text-[#2596be] sm:text-4xl lg:text-5xl">Project Terbaru</h3>
+        <p class="mt-2 text-center text-base font-semibold text-gray-500 sm:text-lg">Beberapa project yang telah saya kembangkan. Klik gambar untuk melihat detail.</p>
+        
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mt-8 mb-4 project-filter-container px-4">
+            <button type="button" class="project-filter-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-[#254ABE] text-white shadow-md hover:shadow-lg" data-filter="all">Semua Project</button>
+            <button type="button" class="project-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-[#254ABE] hover:text-white" data-filter="laravel">Laravel</button>
+            <button type="button" class="project-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-[#254ABE] hover:text-white" data-filter="e-commerce">E-Commerce</button>
+            <button type="button" class="project-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-[#254ABE] hover:text-white" data-filter="web-app">Web App</button>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <!-- Card 1 -->
+            <article class="project-card h-full rounded-2xl bg-white/90 dark:bg-slate-800/90 p-5 shadow-lg border-2 border-[#3B82F6] dark:border-sky-500 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-category="laravel web-app e-commerce">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer modal-trigger" data-img="img/Sulam.png" data-title="Website Marketplace Sulam" data-desc="Marketplace Sulam adalah website jual beli produk sulaman yang dibangun menggunakan Laravel. Platform ini memudahkan pelanggan dalam mencari dan membeli produk, serta membantu admin mengelola produk dan transaksi secara efisien. Website ini menggunakan Spatie Permission untuk mengatur hak akses pengguna, Tailwind CSS untuk menciptakan tampilan yang modern dan responsif, serta Fonnte WhatsApp Gateway untuk mengirimkan notifikasi transaksi secara otomatis kepada pelanggan." data-tags="Laravel,Spatie Permission,Tailwind CSS,WhatsApp Gateway">
+                        <img src="img/Sulam.png" alt="Project Sulam" class="h-56 w-full object-cover sm:h-64 transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white text-sm font-semibold flex items-center gap-1.5 bg-[#254ABE]/90 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+                                🔍 Klik untuk Perbesar & Detail
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-2">
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-blue-100 dark:bg-sky-900/60 text-[#254ABE] dark:text-sky-300">Laravel</span>
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300">Tailwind</span>
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300">WhatsApp Gateway</span>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold sm:text-2xl text-slate-900 dark:text-white">Website Marketplace Sulam</h3>
+                    <p class="text-justify text-gray-700 dark:text-gray-300 tracking-tighter text-sm sm:text-base">Marketplace Sulam adalah website jual beli produk sulaman yang dibangun menggunakan Laravel. Platform ini memudahkan pelanggan dalam mencari dan membeli produk, serta membantu admin mengelola produk dan transaksi secara efisien. Website ini menggunakan Spatie Permission untuk mengatur hak akses pengguna, Tailwind CSS untuk menciptakan tampilan yang modern dan responsif, serta Fonnte WhatsApp Gateway untuk mengirimkan notifikasi transaksi secara otomatis kepada pelanggan.</p>
+                </div>
             </article>
-            <article class="h-full rounded-xl bg-white/80 p-5 shadow-lg border-2 border-[#3B82F6]">
-                <img src="img/Project_Portofolio.png" alt="Project Portofolio" class="h-56 w-full rounded-lg object-cover sm:h-64" loading="lazy" decoding="async">
-                <h3 class="mt-4 mb-2 text-xl font-semibold sm:text-2xl">Website Portofolio Pribadi</h3>
-                <p class="text-justify text-gray-700 tracking-tighter">Website Portofolio Pribadi merupakan project pertama saya membuat website tujuannya untuk menampilkan koleksi proyek dan keahlian yang telah dikembangkan selama berkarir di dunia pemrograman.</p>
+
+            <!-- Card 2 -->
+            <article class="project-card h-full rounded-2xl bg-white/90 dark:bg-slate-800/90 p-5 shadow-lg border-2 border-[#3B82F6] dark:border-sky-500 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-category="web-app">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer modal-trigger" data-img="img/Project_MenaraSumbar.png" data-title="Website Menara Sumbar" data-desc="Website ini dibangun untuk tujuan menyediakan informasi tentang Base Transceiver Station (BTS) kepada pengunjung, pada website ini mempunyai peta yang menampilkan lokasi BTS lengkap dengan jangkauan jaringan dan sudah memiliki fitur geotagging untuk mengetahui apakah pengguna berada dalam jangkauan jaringan." data-tags="Geotagging,Interactive Map,Web Development,Troubleshooting">
+                        <img src="img/Project_MenaraSumbar.png" alt="Project Menara Sumbar" class="h-56 w-full object-cover sm:h-64 transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white text-sm font-semibold flex items-center gap-1.5 bg-[#254ABE]/90 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+                                🔍 Klik untuk Perbesar & Detail
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-2">
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-sky-100 dark:bg-sky-900/60 text-sky-700 dark:text-sky-300">Geotagging</span>
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300">Interactive Map</span>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold sm:text-2xl text-slate-900 dark:text-white">Website Menara Sumbar</h3>
+                    <p class="text-justify text-gray-700 dark:text-gray-300 tracking-tighter text-sm sm:text-base">Website ini dibangun untuk tujuan menyediakan informasi tentang Base Transceiver Station (BTS) kepada pengunjung, pada website ini mempunyai peta yang menampilkan lokasi BTS lengkap dengan jangkauan jaringan dan sudah memiliki fitur geotagging untuk mengetahui apakah pengguna berada dalam jangkauan jaringan.</p>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="project-card h-full rounded-2xl bg-white/90 dark:bg-slate-800/90 p-5 shadow-lg border-2 border-[#3B82F6] dark:border-sky-500 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-category="laravel e-commerce web-app">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer modal-trigger" data-img="img/Solvibe.png" data-title="Website E-Commerce Solvibe" data-desc="Solvibe adalah website E-Commerce yang dibangun menggunakan Laravel + Spatie Permission + Tailwind untuk memudahkan proses jual beli secara online. Melalui website ini, pengguna dapat melihat katalog produk, mencari barang, menambahkan produk ke keranjang, dan melakukan pembelian dengan mudah. Sementara itu, admin dapat mengelola produk, stok, dan transaksi melalui dashboard yang terintegrasi." data-tags="Laravel,E-Commerce,Spatie Permission,Tailwind CSS">
+                        <img src="img/Solvibe.png" alt="Project Solvibe" class="h-56 w-full object-cover sm:h-64 transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white text-sm font-semibold flex items-center gap-1.5 bg-[#254ABE]/90 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+                                🔍 Klik untuk Perbesar & Detail
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-2">
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-blue-100 dark:bg-sky-900/60 text-[#254ABE] dark:text-sky-300">Laravel</span>
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-amber-100 dark:bg-amber-900/60 text-amber-700 dark:text-amber-300">E-Commerce</span>
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300">Tailwind</span>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold sm:text-2xl text-slate-900 dark:text-white">Website E-Commerce Solvibe</h3>
+                    <p class="text-justify text-gray-700 dark:text-gray-300 tracking-tighter text-sm sm:text-base">Solvibe adalah website E-Commerce yang dibangun menggunakan Laravel + Spatie Permission + Tailwind untuk memudahkan proses jual beli secara online. Melalui website ini, pengguna dapat melihat katalog produk, mencari barang, menambahkan produk ke keranjang, dan melakukan pembelian dengan mudah. Sementara itu, admin dapat mengelola produk, stok, dan transaksi melalui dashboard yang terintegrasi.</p>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="project-card h-full rounded-2xl bg-white/90 dark:bg-slate-800/90 p-5 shadow-lg border-2 border-[#3B82F6] dark:border-sky-500 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between" data-category="web-app">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer modal-trigger" data-img="img/Project_Portofolio.png" data-title="Website Portofolio Pribadi" data-desc="Website Portofolio Pribadi merupakan project pertama saya membuat website tujuannya untuk menampilkan koleksi proyek dan keahlian yang telah dikembangkan selama berkarir di dunia pemrograman." data-tags="HTML5,CSS3,JavaScript,Tailwind,Anime.js">
+                        <img src="img/Project_Portofolio.png" alt="Project Portofolio" class="h-56 w-full object-cover sm:h-64 transform group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <span class="text-white text-sm font-semibold flex items-center gap-1.5 bg-[#254ABE]/90 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+                                🔍 Klik untuk Perbesar & Detail
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4 mb-2">
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-teal-100 dark:bg-teal-900/60 text-teal-700 dark:text-teal-300">HTML & CSS</span>
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-amber-100 dark:bg-amber-900/60 text-amber-700 dark:text-amber-300">JavaScript</span>
+                        <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-pink-100 dark:bg-pink-900/60 text-pink-700 dark:text-pink-300">Anime.js</span>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold sm:text-2xl text-slate-900 dark:text-white">Website Portofolio Pribadi</h3>
+                    <p class="text-justify text-gray-700 dark:text-gray-300 tracking-tighter text-sm sm:text-base">Website Portofolio Pribadi merupakan project pertama saya membuat website tujuannya untuk menampilkan koleksi proyek dan keahlian yang telah dikembangkan selama berkarir di dunia pemrograman.</p>
+                </div>
             </article>
         </div>
-     </section>
+    </section>
     <!-- Portofolio End -->
 
     <!-- Kontak - Simple & Professional -->
@@ -235,16 +418,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 <!-- Email -->
                 <a href="mailto:ahmaderlan014@gmail.com" class="group reveal-on-scroll">
-                    <div class="rounded-lg border border-slate-200 dark:border-slate-700 contact-card-bg p-6 hover:border-[#254ABE] dark:hover:border-sky-400 transition duration-300 hover:-translate-y-2 hover:shadow-md hover:shadow-gray-400 dark:hover:shadow-gray-200">
+                    <div
+                        class="rounded-lg border border-slate-200 dark:border-slate-700 contact-card-bg p-6 hover:border-[#254ABE] dark:hover:border-sky-400 transition duration-300 hover:-translate-y-2 hover:shadow-md hover:shadow-gray-400 dark:hover:shadow-gray-200">
                         <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#254ABE]/10 dark:bg-sky-400/10 flex-shrink-0">
-                                <svg class="h-6 w-6 contact-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#254ABE]/10 dark:bg-sky-400/10 flex-shrink-0">
+                                <svg class="h-6 w-6 contact-icon" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path
+                                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z" />
                                 </svg>
                             </div>
                             <div class="flex-1">
                                 <h3 class="text-lg font-semibold contact-card-title">Email</h3>
-                                <p class="text-[#254ABE] dark:text-sky-300 text-sm font-medium">ahmaderlan014@gmail.com</p>
+                                <p class="text-[#254ABE] dark:text-sky-300 text-sm font-medium">ahmaderlan014@gmail.com
+                                </p>
                                 <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Waktu respons 24 jam.</p>
                             </div>
                         </div>
@@ -253,17 +441,22 @@
 
                 <!-- Instagram -->
                 <a href="https://www.instagram.com/erlannn.s/" target="_blank" class="group reveal-on-scroll">
-                    <div class="rounded-lg border border-slate-200 dark:border-slate-700 contact-card-bg p-6 hover:border-[#254ABE] dark:hover:border-sky-400 transition duration-300 hover:-translate-y-2 hover:shadow-md hover:shadow-gray-400 dark:hover:shadow-gray-200">
+                    <div
+                        class="rounded-lg border border-slate-200 dark:border-slate-700 contact-card-bg p-6 hover:border-[#254ABE] dark:hover:border-sky-400 transition duration-300 hover:-translate-y-2 hover:shadow-md hover:shadow-gray-400 dark:hover:shadow-gray-200">
                         <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#254ABE]/10 dark:bg-sky-400/10 flex-shrink-0">
-                                <svg class="h-6 w-6 contact-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zm6.3-3.8a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 10.5A1.5 1.5 0 1 1 10.5 12 1.5 1.5 0 0 1 12 10.5z"/>
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#254ABE]/10 dark:bg-sky-400/10 flex-shrink-0">
+                                <svg class="h-6 w-6 contact-icon" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path
+                                        d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zm6.3-3.8a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 10.5A1.5 1.5 0 1 1 10.5 12 1.5 1.5 0 0 1 12 10.5z" />
                                 </svg>
                             </div>
                             <div class="flex-1">
                                 <h3 class="text-lg font-semibold contact-card-title">Instagram</h3>
                                 <p class="text-[#254ABE] dark:text-sky-300 text-sm font-medium">@erlannn.s</p>
-                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Ikuti saya untuk mengenal saya lebih jauh.</p>
+                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Ikuti saya untuk mengenal saya
+                                    lebih jauh.</p>
                             </div>
                         </div>
                     </div>
@@ -271,35 +464,43 @@
 
                 <!-- GitHub -->
                 <a href="https://github.com/erlannn" class="group reveal-on-scroll" target="_blank">
-                    <div class="rounded-lg border border-slate-200 dark:border-slate-700 contact-card-bg p-6 hover:border-[#254ABE] dark:hover:border-sky-400 transition duration-300 hover:-translate-y-2 hover:shadow-md hover:shadow-gray-400 dark:hover:shadow-gray-200">
+                    <div
+                        class="rounded-lg border border-slate-200 dark:border-slate-700 contact-card-bg p-6 hover:border-[#254ABE] dark:hover:border-sky-400 transition duration-300 hover:-translate-y-2 hover:shadow-md hover:shadow-gray-400 dark:hover:shadow-gray-200">
                         <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#254ABE]/10 dark:bg-sky-400/10 flex-shrink-0">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#254ABE]/10 dark:bg-sky-400/10 flex-shrink-0">
                                 <svg class="h-6 w-6 contact-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                             </div>
                             <div class="flex-1">
                                 <h3 class="text-lg font-semibold contact-card-title">GitHub</h3>
                                 <p class="text-[#254ABE] dark:text-sky-300 text-sm font-medium">erlannn</p>
-                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Lihat repository & project yang telah saya kerjakan.</p>
+                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Lihat repository & project yang
+                                    telah saya kerjakan.</p>
                             </div>
                         </div>
                     </div>
                 </a>
 
                 <!-- LinkedIn -->
-                <a href="" class="group reveal-on-scroll" >
-                    <div class="rounded-lg border border-slate-200 dark:border-slate-700 contact-card-bg p-6 hover:border-[#254ABE] dark:hover:border-sky-400 transition duration-300 hover:-translate-y-2 hover:shadow-md hover:shadow-gray-400 dark:hover:shadow-gray-200">
+                <a href="" class="group reveal-on-scroll disabled-link ">
+                    <div
+                        class="rounded-lg border border-slate-200 dark:border-slate-700 contact-card-bg p-6 hover:border-[#254ABE] dark:hover:border-sky-400 transition duration-300 hover:-translate-y-2 hover:shadow-md hover:shadow-gray-400 dark:hover:shadow-gray-200">
                         <div class="flex items-start gap-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#254ABE]/10 dark:bg-sky-400/10 flex-shrink-0">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#254ABE]/10 dark:bg-sky-400/10 flex-shrink-0">
                                 <svg class="h-6 w-6 contact-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.25-.129.599-.129.948v5.439h-3.554s.047-8.733 0-9.635h3.554v1.366c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.492zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.707 0-.968.77-1.708 1.971-1.708 1.144 0 1.914.74 1.938 1.708 0 .949-.794 1.707-1.994 1.707zm1.582 11.019H3.771V9.817h3.148v10.635zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.25-.129.599-.129.948v5.439h-3.554s.047-8.733 0-9.635h3.554v1.366c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.492zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.707 0-.968.77-1.708 1.971-1.708 1.144 0 1.914.74 1.938 1.708 0 .949-.794 1.707-1.994 1.707zm1.582 11.019H3.771V9.817h3.148v10.635zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
                                 </svg>
                             </div>
                             <div class="flex-1">
                                 <h3 class="text-lg font-semibold contact-card-title">LinkedIn</h3>
                                 <p class="text-[#254ABE] dark:text-sky-300 text-sm font-medium">Connect</p>
-                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Terhubung secara profesional</p>
+                                <p class="text-gray-700 dark:text-gray-400 text-sm mt-1">Terhubung secara profesional
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -314,50 +515,111 @@
         <div class="mx-auto max-w-6xl px-4 py-10 md:py-12">
             <div class="reveal-on-scroll grid gap-8 md:grid-cols-3">
                 <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#254ABE] dark:text-sky-300">Ahmad Erlan Saputra</p>
-                    <p class="mt-4 max-w-sm text-sm leading-7 text-slate-600 dark:text-gray-300">Portofolio pribadi untuk menampilkan pengalaman, proyek, dan cara terbaik untuk terhubung secara profesional.</p>
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#254ABE] dark:text-sky-300">Ahmad
+                        Erlan Saputra</p>
+                    <p class="mt-4 max-w-sm text-sm leading-7 text-slate-600 dark:text-gray-300">Portofolio pribadi
+                        untuk menampilkan pengalaman, proyek, dan cara terbaik untuk terhubung secara profesional.</p>
                 </div>
                 <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#254ABE] dark:text-sky-300">Navigasi</p>
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#254ABE] dark:text-sky-300">
+                        Navigasi</p>
                     <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-gray-300">
-                        <li><a href="#beranda" class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Beranda</a></li>
-                        <li><a href="#tentangsaya" class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Tentang Saya</a></li>
-                        <li><a href="#portofolio" class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Portofolio</a></li>
-                        <li><a href="#kontak" class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Kontak</a></li>
+                        <li><a href="#beranda"
+                                class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Beranda</a>
+                        </li>
+                        <li><a href="#tentangsaya"
+                                class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Tentang
+                                Saya</a></li>
+                        <li><a href="#portofolio"
+                                class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Portofolio</a>
+                        </li>
+                        <li><a href="#kontak"
+                                class="footer-link inline-block hover:text-[#254ABE] dark:hover:text-white">Kontak</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#254ABE] dark:text-sky-300">Terhubung</p>
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#254ABE] dark:text-sky-300">
+                        Terhubung</p>
                     <div class="mt-4 flex items-center gap-4">
-                        <a href="https://www.instagram.com/erlannn.s/" target="_blank" class="rounded-full border border-sky-800 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white" aria-label="Instagram Ahmad Erlan Saputra">
-                            <svg class="h-6 w-6 text-[#254ABE] dark:text-sky-300" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zm6.3-3.8a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 10.5A1.5 1.5 0 1 1 10.5 12 1.5 1.5 0 0 1 12 10.5z"/>
+                        <a href="https://www.instagram.com/erlannn.s/" target="_blank"
+                            class="rounded-full border border-sky-800 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white"
+                            aria-label="Instagram Ahmad Erlan Saputra">
+                            <svg class="h-6 w-6 text-[#254ABE] dark:text-sky-300" viewBox="0 0 24 24"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zm6.3-3.8a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 10.5A1.5 1.5 0 1 1 10.5 12 1.5 1.5 0 0 1 12 10.5z" />
                             </svg>
                         </a>
-                        <a href="mailto:ahmaderlan014@gmail.com" class="rounded-full border border-sky-800 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white" aria-label="Email Ahmad Erlan Saputra">
-                            <svg class="h-6 w-6 text-[#254ABE] dark:text-sky-300" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+                        <a href="mailto:ahmaderlan014@gmail.com"
+                            class="rounded-full border border-sky-800 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white"
+                            aria-label="Email Ahmad Erlan Saputra">
+                            <svg class="h-6 w-6 text-[#254ABE] dark:text-sky-300" viewBox="0 0 24 24"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z" />
                             </svg>
                         </a>
-                        <a href="" class="rounded-full border border-sky-800 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white" aria-label="GitHub Ahmad Erlan Saputra">
-                            <svg class="h-6 w-6 object-contain" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        <a href="https://github.com/erlannn" target="_blank"
+                            class="rounded-full border border-sky-800 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white"
+                            aria-label="GitHub Ahmad Erlan Saputra">
+                            <svg class="h-6 w-6 object-contain" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
                         </a>
-                        <a href="" class="rounded-full border border-sky-800 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white" aria-label="LinkedIn Ahmad Erlan Saputra">
-                            <svg class="h-6 w-6 object-contain" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.25-.129.599-.129.948v5.439h-3.554s.047-8.733 0-9.635h3.554v1.366c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.492zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.707 0-.968.77-1.708 1.971-1.708 1.144 0 1.914.74 1.938 1.708 0 .949-.794 1.707-1.994 1.707zm1.582 11.019H3.771V9.817h3.148v10.635zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        <!-- <a href="" class="rounded-full border border-sky-800 bg-white p-3 transition duration-300 hover:-translate-y-1 hover:bg-sky-50 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white"
+                            aria-label="LinkedIn Ahmad Erlan Saputra">
+                            <svg class="h-6 w-6 object-contain" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.25-.129.599-.129.948v5.439h-3.554s.047-8.733 0-9.635h3.554v1.366c.43-.664 1.199-1.608 2.928-1.608 2.136 0 3.745 1.393 3.745 4.385v5.492zM5.337 9.433c-1.144 0-1.915-.758-1.915-1.707 0-.968.77-1.708 1.971-1.708 1.144 0 1.914.74 1.938 1.708 0 .949-.794 1.707-1.994 1.707zm1.582 11.019H3.771V9.817h3.148v10.635zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
                             </svg>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
             <div class="mt-10 border-t border-blue-700 pt-6 text-center text-sm text-slate-600 dark:border-blue-700 ">
-                <p>Dibuat oleh <a href="https://www.instagram.com/erlannn.s/" target="_blank" class="footer-link font-semibold text-[#254ABE] hover:text-gray-500 dark:text-[#254ABE] dark:hover:text-text-gray-800">Ahmad Erlan Saputra</a> dengan <a href="https://www.tailwindcss.com/" target="_blank" class="footer-link font-semibold text-[#254ABE] hover:text-gray-500 dark:text-[#254ABE] dark:hover:text-gray-800">Tailwind CSS</a>.</p>
+                <p>Dibuat oleh <a href="https://www.instagram.com/erlannn.s/" target="_blank"
+                        class="footer-link font-semibold text-[#254ABE] hover:text-gray-500 dark:text-[#254ABE] dark:hover:text-text-gray-800">Ahmad
+                        Erlan Saputra</a> dengan <a href="https://www.tailwindcss.com/" target="_blank"
+                        class="footer-link font-semibold text-[#254ABE] hover:text-gray-500 dark:text-[#254ABE] dark:hover:text-gray-800">Tailwind
+                        CSS</a>.</p>
             </div>
         </div>
-    </footer>
-    <!-- Footer End -->
+    <!-- Modal Lightbox Preview -->
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300" aria-hidden="true">
+        <div class="relative max-w-3xl w-full bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200 dark:border-slate-700 transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto">
+            <button id="modal-close" type="button" class="absolute top-4 right-4 p-2 rounded-full text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition duration-200" aria-label="Tutup modal">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <img id="modal-img" src="" alt="Project Preview" class="w-full h-60 sm:h-80 object-cover rounded-2xl mb-6 shadow-md border border-slate-200/50 dark:border-slate-700/50">
+            <div id="modal-tags" class="flex flex-wrap gap-2 mb-3"></div>
+            <h3 id="modal-title" class="text-2xl sm:text-3xl font-bold text-[#254ABE] dark:text-sky-400 mb-3"></h3>
+            <p id="modal-desc" class="text-slate-700 dark:text-slate-300 leading-relaxed text-justify text-sm sm:text-base mb-6"></p>
+            <div class="flex justify-end gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+                <button id="modal-close-btn" type="button" class="px-6 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition duration-200">Tutup Preview</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button dengan Progress Ring -->
+    <button id="back-to-top" type="button" class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-[#254ABE] text-white shadow-xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 hover:bg-blue-700 group focus:outline-none" aria-label="Kembali ke atas">
+        <svg class="w-6 h-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+
+    <!-- Toast Notification -->
+    <div id="toast-notif" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 text-white px-6 py-3 rounded-2xl shadow-2xl text-sm font-semibold opacity-0 pointer-events-none transition-all duration-300 border border-slate-700/80 flex items-center gap-2.5 backdrop-blur-md">
+        <span id="toast-icon" class="text-lg">✨</span>
+        <span id="toast-msg">Teks berhasil disalin!</span>
+    </div>
+
+    <!-- Cursor Spotlight Overlay (Desktop Only) -->
+    <div id="cursor-spotlight" class="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300 opacity-0 md:block hidden" style="background: radial-gradient(600px circle at 0px 0px, rgba(37, 74, 190, 0.08), transparent 80%);"></div>
 
 </body>
+
 </html>
